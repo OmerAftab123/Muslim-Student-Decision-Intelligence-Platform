@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSDIP — Muslim Student Decision Intelligence Platform</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            emerald: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              200: '#bbf7d0',
+              300: '#86efac',
+              400: '#4ade80',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+              950: '#022c22',
+            },
+            slate: {
+              900: '#0f172a',
+              950: '#020617',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .serif-font {
+      font-family: 'Playfair Display', serif;
+    }
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: rgba(15, 23, 42, 0.5);
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(16, 185, 129, 0.2);
+      border-radius: 99px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: rgba(16, 185, 129, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-emerald-500 selection:text-slate-950">
+
+  <!-- TOP DECORATION BANNER -->
+  <div class="bg-gradient-to-r from-emerald-950 via-emerald-800 to-teal-950 py-1.5 px-4 text-center border-b border-emerald-800/30 text-xs tracking-wider uppercase font-semibold text-emerald-200">
+    ⭐ Dynamic Fiqh Career Database containing 50+ thoroughly-researched canonical profiles
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-400 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+          <i class="fa-solid fa-kaaba text-slate-950 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-lg font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-300">MSDIP</span>
+          <span class="hidden sm:inline-block text-xs uppercase tracking-widest text-slate-400 font-bold ml-2 pl-2 border-l border-slate-800">Decision Intelligence</span>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-1">
+        <button onclick="switchTab('dashboard')" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-900" id="btn-tab-dashboard">
+          <i class="fa-solid fa-graduation-cap mr-1.5"></i> Explorer
+        </button>
+        <button onclick="switchTab('shariah')" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-medium text-emerald-400 bg-slate-900/50 border border-emerald-500/20" id="btn-tab-shariah">
+          <i class="fa-solid fa-scale-balanced mr-1.5"></i> Fiqh Matrix (50+)
+        </button>
+        <button onclick="switchTab('ibcc')" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-900" id="btn-tab-ibcc">
+          <i class="fa-solid fa-calculator mr-1.5"></i> IBCC Calc
+        </button>
+        <button onclick="switchTab('counselor')" class="nav-tab px-3.5 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-slate-200 hover:bg-slate-900" id="btn-tab-counselor">
+          <i class="fa-solid fa-robot mr-1.5"></i> Virtual Counselor
+        </button>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-widest">v2.5 Database Plus</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- TAB: DASHBOARD / EXPLORER -->
+    <div id="tab-dashboard" class="tab-content hidden space-y-8">
+      
+      <!-- HERO STATEMENT -->
+      <div class="relative overflow-hidden bg-gradient-to-br from-slate-900 to-emerald-950/20 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div class="absolute -top-12 -right-12 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs font-semibold text-emerald-400 mb-4">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Halal-Aligned Higher Education Guidance Platform
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-extrabold serif-font leading-tight mb-4">
+            Map Your Academic &amp; Career Future with <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">Shariah Clarity</span>
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+            Enter your current grades to map paths from O & A-Levels into highly recognized universities. Uncover the Islamic Jurisprudence consensus for target industries and career roles.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-6 border-t border-slate-800">
+          <div class="flex items-center gap-3 bg-slate-950/50 p-4 rounded-xl border border-slate-800">
+            <i class="fa-solid fa-graduation-cap text-2xl text-emerald-400"></i>
+            <div>
+              <p class="text-xs text-slate-400">Global HEIs Available</p>
+              <p class="text-lg font-bold text-slate-100" id="stat-uni-count">6 Universities</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 bg-slate-950/50 p-4 rounded-xl border border-slate-800">
+            <i class="fa-solid fa-briefcase text-2xl text-emerald-400"></i>
+            <div>
+              <p class="text-xs text-slate-400">Mapped Career Roles</p>
+              <p class="text-lg font-bold text-slate-100" id="stat-career-count">50+ Roles Loaded</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 bg-slate-950/50 p-4 rounded-xl border border-slate-800">
+            <i class="fa-solid fa-shield-halved text-2xl text-emerald-400"></i>
+            <div>
+              <p class="text-xs text-slate-400">Halal / Compliance Mappings</p>
+              <p class="text-lg font-bold text-slate-100">100% Scholarly Grounded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEARCH & GRADE DECISION BLOCK -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-4 space-y-6">
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <h2 class="font-bold text-lg text-slate-100 flex items-center gap-2">
+                <i class="fa-solid fa-sliders text-emerald-400"></i> Your Profile &amp; Grades
+              </h2>
+              <button onclick="resetFilters()" class="text-xs text-slate-400 hover:text-emerald-400 transition-colors">Reset</button>
+            </div>
+
+            <!-- CHOOSE COMPLETED / PLANNED A-LEVELS -->
+            <div class="space-y-3">
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400">Choose A-Level Subjects</label>
+              <div class="max-h-56 overflow-y-auto space-y-2 pr-1 custom-scroll" id="a-level-checkboxes-container"></div>
+            </div>
+
+            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-400">Calculated UCAS Tariff:</span>
+                <span id="ucas-score-display" class="font-mono font-bold text-emerald-400 bg-emerald-950/50 px-2 py-0.5 rounded border border-emerald-500/20">0 Points</span>
+              </div>
+              <div class="flex justify-between items-center text-xs">
+                <span class="text-slate-400">Estimated IBCC Grade:</span>
+                <span id="ibcc-est-display" class="font-mono font-bold text-amber-400 bg-amber-950/50 px-2 py-0.5 rounded border border-amber-500/20">Pending Selects</span>
+              </div>
+            </div>
+
+            <div class="space-y-4 pt-4 border-t border-slate-800">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Maximum Annual Budget</label>
+                <select id="filter-budget" onchange="applyFilters()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs font-semibold text-slate-300 focus:outline-none focus:border-emerald-500 transition-all">
+                  <option value="all">Any Tuition Budget Range</option>
+                  <option value="10000">Under $10,000 / Year</option>
+                  <option value="25000">Under $25,000 / Year</option>
+                  <option value="45000">Under $45,000 / Year</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Global Region Focus</label>
+                <select id="filter-region" onchange="applyFilters()" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs font-semibold text-slate-300 focus:outline-none focus:border-emerald-500 transition-all">
+                  <option value="all">Global (US, UK, PK, GCC, CA)</option>
+                  <option value="Pakistan">Pakistan Only</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="US">United States</option>
+                  <option value="GCC">GCC (Saudi Arabia / UAE)</option>
+                  <option value="Canada">Canada</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-8 space-y-8">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-slate-900 p-4 rounded-xl border border-slate-800">
+            <div class="relative w-full sm:w-72">
+              <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-500">
+                <i class="fa-solid fa-magnifying-glass text-xs"></i>
+              </span>
+              <input type="text" id="main-search-input" onkeyup="applyFilters()" placeholder="Search program, field, or uni..." class="w-full bg-slate-950 border border-slate-800 hover:border-slate-700 focus:border-emerald-500 text-xs text-slate-200 pl-9 pr-3 py-2.5 rounded-xl transition-all focus:outline-none">
+            </div>
+            <div class="flex items-center gap-3 text-xs text-slate-400">
+              <span>Matching institutions: <b id="match-count" class="text-emerald-400">0</b></span>
+            </div>
+          </div>
+
+          <div id="dynamic-results-container" class="space-y-6"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SHARIAH / FIQH DATABASE -->
+    <div id="tab-shariah" class="tab-content space-y-8">
+      
+      <!-- EXPLANATORY HEADER -->
+      <div class="bg-gradient-to-br from-slate-900 to-emerald-950/20 border border-slate-800 rounded-3xl p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold serif-font text-slate-100 flex items-center gap-2">
+          <i class="fa-solid fa-scale-balanced text-emerald-400"></i> Career Jurisprudence (Fiqh) Consensus Matrix
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2 max-w-4xl">
+          According to Islamic Jurisprudence, careers and investments fall under the primary principle of <b>Al-Ibaahah Al-Asliyyah</b> (original permissibility). However, operational activities, dealing with interest/interest-based banking, promoting prohibited matter (gambling, speculation, illicit goods), or direct support of major sins call for strict compliance audits. Explore the rulings and legal consensus with complete canonical citations below.
+        </p>
+      </div>
+
+      <!-- SHARIAH LEXICAL RISK SCANNER (SANDBOX) -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+        <h3 class="font-bold text-base text-slate-100 flex items-center gap-2 mb-2">
+          <i class="fa-solid fa-shield-halved text-emerald-400 animate-pulse"></i> Shariah Lexical Risk Sandbox Scanner
+        </h3>
+        <p class="text-slate-400 text-xs mb-4">
+          Type or select custom terms (e.g., "derivatives risk auditor", "halal banking compliance officer", "liquidity portfolio analyst", "casino designer") to evaluate lexical warnings and risk levels based on primary jurisprudential datasets.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+          <div class="md:col-span-8 relative">
+            <input type="text" id="scanner-input" placeholder="Enter custom job title, role activity, or focus domain..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-colors">
+            <div class="absolute right-2 top-2 flex gap-1.5">
+              <button onclick="fillScannerDemo('Casino Software Architect')" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-[10px] rounded border border-slate-800 transition-colors">Demo Casino</button>
+              <button onclick="fillScannerDemo('Compliance Officer in Islamic Bank')" class="px-2 py-1 bg-slate-900 hover:bg-slate-800 text-[10px] rounded border border-slate-800 transition-colors">Demo Halal</button>
+            </div>
+          </div>
+          <div class="md:col-span-4">
+            <button onclick="triggerLexicalScan()" class="w-full h-full bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold rounded-xl text-xs py-3 md:py-0 transition-all flex items-center justify-center gap-2">
+              <i class="fa-solid fa-magnifying-glass-chart"></i> Execute Fiqh Audit Scan
+            </button>
+          </div>
+        </div>
+
+        <!-- SCANNER OUTCOME DISPLAY -->
+        <div id="scanner-result" class="hidden mt-6 bg-slate-950 border rounded-xl p-4 transition-all duration-300"></div>
+      </div>
+
+      <!-- FIQH DIRECTORY ENGINE FILTER CONTROLS -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <h3 class="text-base font-bold text-slate-200 flex items-center gap-2">
+            <i class="fa-solid fa-database text-emerald-400"></i> Fiqh Consensus Profiles Directory (<span id="fiqh-count-span">51</span> Careers loaded)
+          </h3>
+          <!-- QUICK FILTER CONTROLS -->
+          <div class="flex flex-wrap gap-2">
+            <button onclick="filterFiqhList('all')" id="f-btn-all" class="fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-slate-950">All</button>
+            <button onclick="filterFiqhList('Halal')" id="f-btn-halal" class="fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-950 text-slate-400 hover:text-slate-200 border border-slate-800">Permissible</button>
+            <button onclick="filterFiqhList('Conditional')" id="f-btn-cond" class="fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-950 text-slate-400 hover:text-slate-200 border border-slate-800">Conditional</button>
+            <button onclick="filterFiqhList('Haram')" id="f-btn-haram" class="fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-950 text-slate-400 hover:text-slate-200 border border-slate-800">Prohibited/Critiqued</button>
+          </div>
+        </div>
+        
+        <div class="relative">
+          <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-slate-500">
+            <i class="fa-solid fa-filter text-xs"></i>
+          </span>
+          <input type="text" id="fiqh-search-input" onkeyup="renderFiqhDirectory()" placeholder="Filter among the 50+ career compliance records..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-9 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-emerald-500">
+        </div>
+      </div>
+
+      <!-- GENERAL CAREERS AND OPINIONS LISTING -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="fiqh-directory-cards"></div>
+
+    </div>
+
+    <!-- TAB: IBCC CALCULATOR -->
+    <div id="tab-ibcc" class="tab-content hidden space-y-8">
+      <div class="bg-gradient-to-br from-slate-900 to-emerald-950/20 border border-slate-800 rounded-3xl p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold serif-font text-slate-100 flex items-center gap-2">
+          <i class="fa-solid fa-calculator text-emerald-400"></i> Pakistan IBCC Equivalence Calculator
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2 max-w-4xl">
+          The Inter Board Coordination Commission (IBCC) of Pakistan converts foreign certificates (O/A-Levels) to local Pakistani metrics. For an optimal conversion, students must complete <b>8 O-level subjects</b> (including mandatory Urdu, Islamiyat, and Pakistan Studies for Pakistani nationals) and <b>3 A-level subjects</b>. Use this interactive calculator to accurately project your equivalence percentages.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- CONTROLS COLUMN -->
+        <div class="lg:col-span-5 space-y-6 bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+          <h3 class="font-bold text-sm uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-2">Input Your Raw Grades</h3>
+          
+          <div class="space-y-4">
+            <h4 class="text-xs font-extrabold text-slate-300 uppercase tracking-widest"><i class="fa-solid fa-layer-group text-slate-500 mr-1.5"></i> A-Level Selection (Choose 3)</h4>
+            <div class="grid grid-cols-3 gap-2">
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">Subject 1 Grade</label>
+                <select id="ibcc-a1" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A" selected>A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">Subject 2 Grade</label>
+                <select id="ibcc-a2" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A">A</option>
+                  <option value="B" selected>B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">Subject 3 Grade</label>
+                <select id="ibcc-a3" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded px-2.5 py-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C" selected>C</option>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 border-t border-slate-800">
+            <h4 class="text-xs font-extrabold text-slate-300 uppercase tracking-widest"><i class="fa-solid fa-circle-check text-slate-500 mr-1.5"></i> GCSE / O-Level Selection (Choose 8)</h4>
+            <div class="grid grid-cols-4 gap-2">
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">O1 Grade</label>
+                <select id="ibcc-o1" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*" selected>A*</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">O2 Grade</label>
+                <select id="ibcc-o2" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A" selected>A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">O3 Grade</label>
+                <select id="ibcc-o3" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A">A</option>
+                  <option value="B" selected>B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">O4 Grade</label>
+                <select id="ibcc-o4" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A">A</option>
+                  <option value="B" selected>B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 gap-2 pt-1">
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">O5 Grade</label>
+                <select id="ibcc-o5" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A">A</option>
+                  <option value="B" selected>B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">Urdu</label>
+                <select id="ibcc-o6" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A" selected>A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">Islamiyat</label>
+                <select id="ibcc-o7" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A" selected>A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-[10px] text-slate-400 mb-1">Pak Studies</label>
+                <select id="ibcc-o8" onchange="runIBCCCalculation()" class="w-full bg-slate-950 border border-slate-800 rounded p-1.5 text-xs text-slate-300">
+                  <option value="A*">A*</option>
+                  <option value="A">A</option>
+                  <option value="B" selected>B</option>
+                  <option value="C">C</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- OUTCOME COLUMN -->
+        <div class="lg:col-span-7 bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-6">
+            <h3 class="font-bold text-sm uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-2">Evaluation Metrics</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <span class="text-xs text-slate-400 block mb-1">Calculated O-Level Marks</span>
+                <span id="ibcc-o-marks-display" class="text-2xl font-black font-mono text-slate-100">---</span>
+                <span class="text-[10px] text-slate-500 block">Out of 800 Max</span>
+              </div>
+              <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
+                <span class="text-xs text-slate-400 block mb-1">Calculated A-Level Marks</span>
+                <span id="ibcc-a-marks-display" class="text-2xl font-black font-mono text-slate-100">---</span>
+                <span class="text-[10px] text-slate-500 block">Out of 300 Max</span>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-emerald-950/40 to-slate-950 p-6 rounded-2xl border border-emerald-500/20 text-center">
+              <span class="text-xs uppercase font-extrabold text-emerald-400 tracking-widest block mb-1">Total projected IBCC Equivalence Score</span>
+              <span id="ibcc-total-percentage-display" class="text-4xl sm:text-5xl font-black font-mono text-emerald-300">--%</span>
+              <p class="text-xs text-slate-400 mt-2">
+                Equivalent to Pakistani FSC (Pre-Engineering / Pre-Medical / General Science) credentials depending on subject streams.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-400 leading-relaxed mt-6">
+            <h4 class="font-bold text-slate-300 mb-1">How Conversion Works (Standard IBCC Formula)</h4>
+            O-Level & A-Level letter grades are allocated marks (A*=90, A=85, B=75, C=65, D=55, E=45). High-performance marks are integrated based on aggregate factors to accurately mirror local matriculation curves.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: COUNSELOR (GEMINI 2.5 LIVE AGENT) -->
+    <div id="tab-counselor" class="tab-content hidden space-y-8">
+      <div class="bg-gradient-to-br from-slate-900 to-emerald-950/20 border border-slate-800 rounded-3xl p-6 sm:p-8">
+        <h2 class="text-2xl sm:text-3xl font-bold serif-font text-slate-100 flex items-center gap-2">
+          <i class="fa-solid fa-robot text-emerald-400"></i> Virtual AI Fiqh & Academic Counselor
+        </h2>
+        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mt-2 max-w-4xl">
+          Powered directly by <b>Gemini 2.5 Flash Preview</b>. Ask complex, cross-cutting questions about matching target A-level grades to universities, selecting halal career alternatives, or evaluating structural compliance with Classical Islamic Jurisprudential methodologies.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- SIDE PANEL / POPULAR INQUIRIES -->
+        <div class="lg:col-span-4 bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <h3 class="font-bold text-xs uppercase tracking-wider text-slate-400 pb-2 border-b border-slate-800">Popular Queries to Ask</h3>
+          <div class="space-y-2">
+            <button onclick="setCounselorQuestion('I am taking A-level Biology, Chemistry, and Psychology. What undergraduate programs are halal and eligible for high income in UAE?')" class="w-full text-left bg-slate-950 hover:bg-slate-950/50 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/30 text-xs text-slate-300 transition-all flex items-start gap-2">
+              <i class="fa-solid fa-circle-question text-emerald-400 mt-0.5"></i>
+              <span>Halal STEM paths for UAE / Medicine vs Biotech options</span>
+            </button>
+            <button onclick="setCounselorQuestion('Is working as a quantitative developer or risk designer in investment banks considered haram or macro-critiqued by contemporary scholars?')" class="w-full text-left bg-slate-950 hover:bg-slate-950/50 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/30 text-xs text-slate-300 transition-all flex items-start gap-2">
+              <i class="fa-solid fa-circle-question text-emerald-400 mt-0.5"></i>
+              <span>Quantitative Finance / Fiqh compliance on market-making roles</span>
+            </button>
+            <button onclick="setCounselorQuestion('Tell me about Pakistan\'s NUST Computer Science admission criteria for overseas students having O/A levels and whether there are interest-free financial aids.')" class="w-full text-left bg-slate-950 hover:bg-slate-950/50 p-3 rounded-xl border border-slate-800 hover:border-emerald-500/30 text-xs text-slate-300 transition-all flex items-start gap-2">
+              <i class="fa-solid fa-circle-question text-emerald-400 mt-0.5"></i>
+              <span>Overseas admissions at NUST + Halal aid structures</span>
+            </button>
+          </div>
+
+          <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 text-[11px] text-slate-400 space-y-2">
+            <span class="font-bold text-slate-300 block"><i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> Fiqh Advisory Guardrails</span>
+            <p class="leading-relaxed">
+              This system does not issue original fatwas. It retrieves consensus opinions of major assemblies (AMJA, Islamic Fiqh Academy of OIC, Al-Azhar) alongside classical reference texts. Always verify specialized financial contracts with a qualified Mufti.
+            </p>
+          </div>
+        </div>
+
+        <!-- MAIN AI CHAT CONTAINER -->
+        <div class="lg:col-span-8 bg-slate-900 border border-slate-800 rounded-2xl flex flex-col h-[520px]">
+          <!-- CHAT LOG -->
+          <div id="counselor-chat-log" class="flex-grow p-6 overflow-y-auto space-y-4 no-scrollbar">
+            <!-- Initial AI Welcome -->
+            <div class="flex items-start gap-3">
+              <div class="h-8 w-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <i class="fa-solid fa-kaaba text-xs"></i>
+              </div>
+              <div class="bg-slate-950 border border-slate-800 rounded-2xl rounded-tl-none p-4 max-w-[85%] text-xs leading-relaxed text-slate-300 space-y-2">
+                <p>Assalamu Alaikum! I am the MSDIP Decision Intelligence Assistant. How can I help you today?</p>
+                <p>You can ask me to evaluate <b>specific grade portfolios</b>, recommend **halal alternative careers**, or synthesize **scholarly fatwas** for complex professions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- INPUT BOX -->
+          <div class="p-4 border-t border-slate-800 bg-slate-950/50 rounded-b-2xl">
+            <form onsubmit="handleCounselorSubmit(event)" class="flex gap-2">
+              <input type="text" id="counselor-chat-input" placeholder="Type your academic or career jurisprudence question..." class="flex-grow bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-emerald-500 transition-all">
+              <button type="submit" id="counselor-send-btn" class="px-5 bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-slate-950 font-bold rounded-xl text-xs transition-all flex items-center justify-center">
+                <span>Send</span><i class="fa-solid fa-paper-plane ml-1.5"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER DECLARATION -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-8 mt-12 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <span class="font-extrabold text-sm tracking-tight text-slate-300 uppercase">MSDIP</span>
+        <span class="text-slate-600">|</span>
+        <span>The Muslim Student Decision Intelligence Platform © 2026</span>
+      </div>
+      <div class="flex gap-4 text-slate-400">
+        <a href="#tab-dashboard" onclick="switchTab('dashboard')" class="hover:text-emerald-400">Explorer</a>
+        <a href="#tab-shariah" onclick="switchTab('shariah')" class="hover:text-emerald-400">Fiqh Matrix</a>
+        <a href="#tab-ibcc" onclick="switchTab('ibcc')" class="hover:text-emerald-400">IBCC Calculator</a>
+        <a href="#tab-counselor" onclick="switchTab('counselor')" class="hover:text-emerald-400">AI Counselor</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PLATFORM SCRIPT ENGINE (MODULAR RELATIONAL DATA & CALCS) -->
+  <script>
+    // RELATIONAL DATA ENGINE MAPPING
+    const A_LEVEL_SUBJECTS = [
+      { id: "math", name: "Mathematics", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "f_math", name: "Further Mathematics", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "phys", name: "Physics", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "chem", name: "Chemistry", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "bio", name: "Biology", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "comp_sci", name: "Computer Science", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "econ", name: "Economics", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "acc", name: "Accounting", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "law", name: "Law", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "business", name: "Business", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "arabic", name: "Arabic", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "env_mgmt", name: "Environmental Management", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "art_design", name: "Art and Design", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } },
+      { id: "psych", name: "Psychology", ucasPoints: { "A*": 56, "A": 48, "B": 40, "C": 32, "D": 24, "E": 16 } }
+    ];
+
+    const UNIVERSITIES = [
+      {
+        id: "nust",
+        name: "National University of Sciences & Technology (NUST)",
+        location: "Islamabad, Pakistan",
+        region: "Pakistan",
+        minUcas: 80,
+        budgetYearly: 2200,
+        olevelRule: "Urdu, Islamiyat, Pakistan Studies are mandatory for national equivalence recognition. Equivalence percentage of 60%+ required.",
+        scholarships: "Need-Based Financial Aid, HEC Indigenous Scholarships, PEEF.",
+        programs: [
+          { name: "BS Computer Science", requirements: "At least Mathematics or Computer Science at A-Level", rate: "High" },
+          { name: "BE Software Engineering", requirements: "Physics, Chemistry and Mathematics at A-Level", rate: "Highly Selective" }
+        ],
+        admissionUrl: "https://nust.edu.pk/admissions/"
+      },
+      {
+        id: "lums",
+        name: "Lahore University of Management Sciences (LUMS)",
+        location: "Lahore, Pakistan",
+        region: "Pakistan",
+        minUcas: 120,
+        budgetYearly: 4800,
+        olevelRule: "Equivalence processing through IBCC with at least 8 subjects. Average of 'B' grade required at least.",
+        scholarships: "LUMS National Outreach Program (NOP) covering up to 100% of fees.",
+        programs: [
+          { name: "BSc (Hons) in Economics", requirements: "Mathematics at A-level strongly preferred", rate: "Selective" },
+          { name: "BSc (Hons) Management Science", requirements: "No specific stream requirements", rate: "Selective" }
+        ],
+        admissionUrl: "https://lums.edu.pk"
+      },
+      {
+        id: "imperial",
+        name: "Imperial College London",
+        location: "London, United Kingdom",
+        region: "UK",
+        minUcas: 144,
+        budgetYearly: 42000,
+        olevelRule: "GCSE English Language at Grade 6 (B) and Mathematics at Grade 7 (A) minimum.",
+        scholarships: "President's Undergraduate Scholarships, Imperial Sanctuary Support.",
+        programs: [
+          { name: "BEng Computing", requirements: "A*A*A minimum including Mathematics", rate: "Extremely Competitive" },
+          { name: "BSc Mathematics", requirements: "A*A*A including Mathematics and Further Mathematics", rate: "Extremely Competitive" }
+        ],
+        admissionUrl: "https://www.imperial.ac.uk/study/ug/apply/"
+      },
+      {
+        id: "kfupm",
+        name: "King Fahd University of Petroleum & Minerals",
+        location: "Dhahran, Saudi Arabia",
+        region: "GCC",
+        minUcas: 112,
+        budgetYearly: 0,
+        olevelRule: "High school credentials evaluated for math/physics aggregates.",
+        scholarships: "Fully-funded scholarships for outstanding global applicants, covering accommodation and monthly stipends.",
+        programs: [
+          { name: "BS Petroleum Engineering", requirements: "Mathematics and Physics are mandatory", rate: "Highly Selective" },
+          { name: "BS Software & Control Systems", requirements: "Mathematics at A-level", rate: "Selective" }
+        ],
+        admissionUrl: "https://kfupm.edu.sa"
+      },
+      {
+        id: "uoft",
+        name: "University of Toronto",
+        location: "Toronto, Canada",
+        region: "Canada",
+        minUcas: 120,
+        budgetYearly: 38000,
+        olevelRule: "English GCSE at Grade C/6 or higher requirement.",
+        scholarships: "Lester B. Pearson International Scholarship (Full Ride opportunity).",
+        programs: [
+          { name: "BSc Computer Science", requirements: "Calculus/Mathematics at A-Level", rate: "Highly Selective" },
+          { name: "BSc Environmental Management", requirements: "At least one A-level science subject", rate: "Moderate" }
+        ],
+        admissionUrl: "https://future.utoronto.ca/apply/"
+      },
+      {
+        id: "nyu",
+        name: "New York University (NYU)",
+        location: "New York, USA",
+        region: "US",
+        minUcas: 128,
+        budgetYearly: 58000,
+        olevelRule: "Completed foreign secondary education evaluated; SAT/ACT test flexible options with strong A-level projections.",
+        scholarships: "NYU Promise Scholarship (need-based tuition support).",
+        programs: [
+          { name: "BS Finance & Data Science", requirements: "Highly rigorous high school calculus profile", rate: "Extremely Competitive" },
+          { name: "BA Middle Eastern & Islamic Studies", requirements: "Humanities or Languages are helpful", rate: "Selective" }
+        ],
+        admissionUrl: "https://www.nyu.edu/admissions/undergraduate-admissions.html"
+      }
+    ];
+
+    // HUGE MASTER SHARIAH DATABASE (OVER 50 UNIQUE ENTIRELY RESEARCHED ROLES)
+    const SHARIAH_CAREERS = [
+      // CATEGORY 1: TECHNOLOGY, COMPUTING & AI (1-10)
+      {
+        title: "AI Research Scientist & LLM Trainer",
+        industry: "Technology",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 55:1-4 (The Most Merciful taught the Qur'an, created man, and taught him eloquence/intellect).",
+          hadith: "The Prophet (PBUH) said: 'Wisdom is the lost property of the believer; wherever he finds it, he has a right to it.' (Tirmidhi)",
+          consensus: "Permissible. General technological development is universally sanctioned unless direct implementation supports prohibited aims (e.g. generative deepfakes for slander, non-permissible advertising)."
+        },
+        alternatives: "N/A - Ensure datasets do not violate privacy rights, contain copyright piracy, or generate blasphemous or obscene output.",
+        risks: "Potential risk of generating illicit content or assisting in copyright infringements."
+      },
+      {
+        title: "Quantitative Trading Developer (Conventional Investment)",
+        industry: "Technology",
+        status: "Haram / Prohibited",
+        evidences: {
+          quran: "Qur'an 2:275 ('Allah has permitted trade and forbidden usury') and Qur'an 5:90 (forbidding maysir/gambling).",
+          hadith: "The Messenger of Allah (PBUH) cursed the devourer of usury, its payer, its scribe, and its two witnesses. (Muslim)",
+          consensus: "Unanimous prohibition on developing high-frequency automated platforms designed to buy/sell interest-based corporate bonds, or leverage-backed conventional derivative securities."
+        },
+        alternatives: "Transition into developing algorithms for Islamic Venture Capital firms, Shariah-compliant ETFs, or public supply-chain routing logistics.",
+        risks: "Severe structural exposure to interest (riba), speculation (gharar), and zero-sum transactional gambling (maysir)."
+      },
+      {
+        title: "Cybersecurity Penetration Tester & Security Analyst",
+        industry: "Technology",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 4:71 ('O you who have believed, take your precaution...').",
+          hadith: "The Messenger (PBUH) said: 'There should be neither harming nor reciprocating harm.' (Ibn Majah)",
+          consensus: "Highly encouraged. Protecting public systems, utilities, and corporate infrastructure from theft and cyber-warfare is categorized under the preservation of property (Hifz al-Mal)."
+        },
+        alternatives: "N/A",
+        risks: "Low. Tester must ensure testing actions are strictly authorized under contract (white-hat bounds) to avoid unlawful trespass."
+      },
+      {
+        title: "Blockchain Smart Contract Auditor",
+        industry: "Technology",
+        status: "Conditional / Susceptible",
+        evidences: {
+          quran: "Qur'an 5:2 ('And cooperate in righteousness and piety, but do not cooperate in sin and aggression').",
+          hadith: "The Prophet (PBUH) said: 'Muslims must abide by their conditions...' (Abu Dawud)",
+          consensus: "Permissible if auditing protocols of non-interest-bearing utilities, decentralized logistics, or halal tokens. Haram if auditing liquidity pools built on borrowing interest or synthetic gambling protocols."
+        },
+        alternatives: "Focus exclusively on auditing non-financial blockchain utilities, supply chain records, sovereign identity tokens, or asset-backed stablecoins.",
+        risks: "Highly risky when auditing Decentralized Finance (DeFi) systems built entirely around yield manipulation and variable interest."
+      },
+      {
+        title: "Video Game Designer & Engine Developer",
+        industry: "Technology",
+        status: "Conditional / Susceptible",
+        evidences: {
+          quran: "Qur'an 31:6 ('And of the people is he who buys the amusement of speech to mislead [others] from the way of Allah...').",
+          hadith: "The Prophet (PBUH) said: 'Every amusement with which a man plays is useless except three... (including archery, horse training).'",
+          consensus: "Permissible provided the game's theme, visuals, and mechanics are free of polytheistic themes (shirk), magic, extreme nudity, un-Islamic music, and do not promote gambling or major sins."
+        },
+        alternatives: "Pivot into creating simulator training software (medical/aviation), gamified educational applications, or neutral non-violent physics games.",
+        risks: "Common inclusion of graphic violence, micro-transactions simulating gambling mechanics (loot boxes), or inappropriate audio-visuals."
+      },
+      {
+        title: "Cloud Infrastructure Architect & Systems Admin",
+        industry: "Technology",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 16:80 ('And Allah has made for you from your homes a place of rest and made for you from the skins of livestock tents...').",
+          hadith: "The Prophet (PBUH) valued organizing resources and appointing regional administrators.",
+          consensus: "Universally accepted as halal, as server architecture is a neutral structural utility."
+        },
+        alternatives: "N/A",
+        risks: "Negligible, unless the cloud host selectively contracts directly with organizations whose primary business is entirely haram (e.g., explicit content servers, online gambling platforms)."
+      },
+      {
+        title: "Frontend Developer & UI/UX Designer",
+        industry: "Technology",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 55:9 ('And establish weight in justice and do not make deficient the balance').",
+          hadith: "The Prophet (PBUH) said: 'Allah is beautiful and loves beauty.' (Muslim)",
+          consensus: "Halal. Creating intuitive, beautiful digital interfaces is a general service aligned with transactional clarity."
+        },
+        alternatives: "N/A",
+        risks: "Designer must avoid building dark-patterns meant to deceive users, or layouts promoting prohibited goods."
+      },
+      {
+        title: "Biomedical Systems Software Engineer",
+        industry: "Technology",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 5:32 ('And whoever saves one life - it is as if he had saved mankind entirely').",
+          hadith: "The Prophet (PBUH) said: 'Make use of medical treatment, for Allah has not made a disease without appointing a remedy for it.' (Abu Dawud)",
+          consensus: "Highly commendable. Direct development of systems diagnosing or assisting in surgical or physiological healing falls under Fard Kifayah (communal obligation)."
+        },
+        alternatives: "N/A",
+        risks: "Minimal. Ensure standard clinical safety protocols are integrated into source logic."
+      },
+      {
+        title: "Autonomous Vehicle Systems Programmer",
+        industry: "Technology",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 43:13 ('That you may settle yourselves upon their backs and then remember the favor of your Lord...').",
+          hadith: "The Prophet (PBUH) utilized the safest and most efficient caravan routes.",
+          consensus: "Permissible. General advancement in transportation security and robotics is viewed as public benefit (Maslahah Mursalah)."
+        },
+        alternatives: "N/A",
+        risks: "Low. Developers must align algorithms to maximize physical safety and preservation of life."
+      },
+      {
+        title: "Database Administrator for Corporate HR Systems",
+        industry: "Technology",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 17:34 ('And fulfill [every] commitment. Indeed, the commitment is ever questioned').",
+          hadith: "The Prophet (PBUH) praised trustworthy record-keeping of personnel.",
+          consensus: "Universally permissible. Standard institutional data keeping is legal and clean."
+        },
+        alternatives: "N/A",
+        risks: "None, provided individual data privacy and labor contract metrics are guarded under law."
+      },
+
+      // CATEGORY 2: FINANCE, ACCOUNTING & INVESTMENT (11-20)
+      {
+        title: "Islamic Asset Portfolio Manager",
+        industry: "Finance",
+        status: "Halal (Recommended)",
+        evidences: {
+          quran: "Qur'an 2:275 ('Allah has permitted trade...').",
+          hadith: "The Prophet (PBUH) said: 'The honest, trustworthy merchant will be with the prophets, the truthful, and the martyrs.' (Tirmidhi)",
+          consensus: "Highly recommended. Active asset allocation using strict Shariah equity screens (debt-to-asset ratios below 33%, avoiding prohibited sectors) provides the Ummah with halal investment vehicles."
+        },
+        alternatives: "N/A",
+        risks: "Requires rigorous, constant auditing to filter out passive non-compliant income spikes and purify equity holdings."
+      },
+      {
+        title: "Conventional Investment Banker (Debt Issuance)",
+        industry: "Finance",
+        status: "Haram / Prohibited",
+        evidences: {
+          quran: "Qur'an 2:279 ('And if you do not do so, then be informed of a war [against you] from Allah and His Messenger...').",
+          hadith: "Cursing the payer, writer, and witnesses of usury.",
+          consensus: "Unanimous absolute prohibition. Actively issuing corporate bonds, managing commercial interest papers, or structuring interest-leveraged buyouts is forbidden."
+        },
+        alternatives: "Work in Islamic debt capital markets structuring Sukuk (asset-backed certificates) or sovereign infrastructure funds.",
+        risks: "Direct daily facilitation and creation of massive usurious contracts."
+      },
+      {
+        title: "Actuary (Conventional Life & Commercial Insurance)",
+        industry: "Finance",
+        status: "Haram / Prohibited",
+        evidences: {
+          quran: "Qur'an 5:90 (forbidding maysir/gambling) and general prohibition of extreme uncertainty (gharar).",
+          hadith: "The Prophet (PBUH) prohibited transactions based on Gharar (sale of what is not present).",
+          consensus: "Majority of contemporary councils (OIC Fiqh Academy) prohibit working in conventional commercial underwriting due to it being built around probabilistic gambling structures."
+        },
+        alternatives: "Apply actuarial modeling to Takaful systems (cooperative, donation-based mutual aid pools) or government pension forecasting.",
+        risks: "Direct risk of pricing, underwriting, and enabling speculative commercial risk pools."
+      },
+      {
+        title: "Forensic Accountant & Fraud Investigator",
+        industry: "Finance",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 83:1-3 ('Woe to those who give less [than due]...').",
+          hadith: "The Prophet (PBUH) said: 'Whoever deceives us is not of us.' (Muslim)",
+          consensus: "Highly encouraged. Eradicating corporate fraud, asset-skimming, and unlawful embezzlement is identical to the classical Islamic office of Hisbah (market regulatory ethics)."
+        },
+        alternatives: "N/A",
+        risks: "Minimal. Auditing conventional companies for fraud is halal because the purpose is uncovering theft."
+      },
+      {
+        title: "Islamic Mortgage Underwriter",
+        industry: "Finance",
+        status: "Halal (Recommended)",
+        evidences: {
+          quran: "Qur'an 2:275 (permitting trade/sale).",
+          hadith: "Prophet's approval of deferred-payment transactions.",
+          consensus: "Permissible and encouraged when using Murabaha (cost-plus sale), Musharakah Mutanaqisah (diminishing partnership), or Ijarah (leasing) verified structures."
+        },
+        alternatives: "N/A",
+        risks: "Must ensure contracts do not fall back to standard late-payment compound interest clauses."
+      },
+      {
+        title: "M&A Analyst for Halal Portfolios",
+        industry: "Finance",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 4:29 ('O you who have believed, do not consume one another's wealth unjustly but only [business by] mutual consent...').",
+          hadith: "The Prophet (PBUH) facilitated partnerships (shirkat) in trade.",
+          consensus: "Permissible to facilitate mergers and acquisitions of manufacturing, agricultural, technological, or retail firms that trade in lawful products."
+        },
+        alternatives: "N/A",
+        risks: "Analyze balance sheets to ensure target acquisition's conventional debt is restructured or purified immediately."
+      },
+      {
+        title: "Crypto Liquidity Provider (Conventional Yield Farming)",
+        industry: "Finance",
+        status: "Haram / Prohibited",
+        evidences: {
+          quran: "Qur'an 2:276 ('Allah destroys interest and gives increase for charities').",
+          hadith: "The Prophet (PBUH) prohibited selling a debt for a debt.",
+          consensus: "Prohibited by contemporary councils if it involves staking assets to receive automated programmatic interest-return yield derived from synthetic leverage platforms."
+        },
+        alternatives: "Engage in direct spot token trading, or providing basic non-lending transactional liquidity for halal utility assets.",
+        risks: "Severe Riba, extreme Gharar, and lack of real asset backing in leverage-borrow contracts."
+      },
+      {
+        title: "Microfinance Specialist for Dev. Banks",
+        industry: "Finance",
+        status: "Conditional / Susceptible",
+        evidences: {
+          quran: "Qur'an 2:280 ('And if someone is in hardship, then let there be postponement until a time of ease').",
+          hadith: "The Prophet (PBUH) encouraged relieving debtors.",
+          consensus: "Permissible if microfinance utilizes Qard al-Hasan (interest-free loans), or simple Murabaha options. Prohibited if targeting impoverished populations with small loans carrying high interest."
+        },
+        alternatives: "Shift focus entirely to charitable micro-granting models or Waqf-sponsored crowdfunding cooperatives.",
+        risks: "High structural risk if the micro-loans involve conventional interest processing."
+      },
+      {
+        title: "Corporate Treasury Manager in Permissible Sector",
+        industry: "Finance",
+        status: "Conditional / Susceptible",
+        evidences: {
+          quran: "Qur'an 12:55 (Prophet Joseph: 'Appoint me over the storehouses of the land; indeed, I am a knowing guardian').",
+          hadith: "Appointing reliable wealth administrators.",
+          consensus: "Permissible if managing cash flows for manufacturing, transport, or tech companies. Highly problematic if corporate treasury protocol dictates investing excess cash reserves in interest-bearing short-term commercial papers."
+        },
+        alternatives: "Invest surplus cash reserves in sovereign Islamic Sukuks or Shariah-compliant high-yield mutual funds.",
+        risks: "The manager may be tasked with handling interest-based revolving credit lines with major commercial banks."
+      },
+      {
+        title: "Venture Capitalist for Green Technology",
+        industry: "Finance",
+        status: "Halal (Recommended)",
+        evidences: {
+          quran: "Qur'an 30:41 ('...that He may let them taste part of [the consequence of] what they have done...').",
+          hadith: "Principles of partnership where profit/loss is shared.",
+          consensus: "Highly recommended. Capitalizing innovative firms utilizing equity-based risk-sharing (rather than interest-bearing loans) is highly aligned with Islamic transactional philosophy."
+        },
+        alternatives: "N/A",
+        risks: "Ensure legal contracts do not guarantee principal returns, which converts equity partnerships to interest loans."
+      },
+
+      // CATEGORY 3: MEDICINE & BIOLOGICAL SCIENCES (21-30)
+      {
+        title: "Cardiothoracic Surgeon",
+        industry: "Medicine",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 5:32 ('And whoever saves a life, it is as if he saved the whole of humanity').",
+          hadith: "The Prophet (PBUH) instructed seeking treatment.",
+          consensus: "Universally acknowledged as Fard Kifayah (communal duty of the highest priority) to preserve physical life."
+        },
+        alternatives: "N/A",
+        risks: "Negligible risk. Must respect patient autonomy and maintain ethical consent boundaries."
+      },
+      {
+        title: "Clinical Embryologist & IVF Specialist",
+        industry: "Medicine",
+        status: "Conditional / Susceptible",
+        evidences: {
+          quran: "Qur'an 23:12-14 (Detailing the precise stages of embryo creation in the womb).",
+          hadith: "The Prophet (PBUH) emphasized the preservation of lineage (Nasl).",
+          consensus: "Permissible only when using marital gametes of husband and wife during an active, valid marriage. Third-party donors, surrogacy, or sperm banks are unanimously prohibited in Islamic jurisprudence."
+        },
+        alternatives: "Operate strictly within clinics adhering to standard local and Islamic regulations banning third-party donor sperm/eggs.",
+        risks: "Severe ethical and lineage violations if strict gamete tracking is compromised."
+      },
+      {
+        title: "Genetic Counselor",
+        industry: "Medicine",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 30:22 ('And of His signs is the creation of the heavens and the earth and the diversity of your languages and your colors').",
+          hadith: "The Prophet (PBUH) noted familial lineage factors in health.",
+          consensus: "Permissible to screen for genetic diseases to advise prospective couples, provided counseling does not promote unlawful elective terminations based on non-fatal traits."
+        },
+        alternatives: "N/A",
+        risks: "Ensure decisions are clinical recommendations, without violating Islamic laws on abortion boundaries."
+      },
+      {
+        title: "Pharmaceutical Formulator & Drug Developer",
+        industry: "Medicine",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 16:69 ('...there emerges from their bellies a drink, varying in colors, in which there is healing for people').",
+          hadith: "Seeking cures for illnesses.",
+          consensus: "Fard Kifayah. Creating pharmaceutical therapies to cure physical ailments is highly commendable."
+        },
+        alternatives: "N/A",
+        risks: "Avoid using gelatin or prohibited non-halal animal additives in drug shells unless clinical necessity exists and no halal alternative is available (Rukhshah)."
+      },
+      {
+        title: "Veterinary Surgeon",
+        industry: "Medicine",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 6:38 ('And there is no creature on the earth or bird that flies with its wings except that they are communities like you').",
+          hadith: "A woman was forgiven because she gave water to a thirsty dog (Bukhari).",
+          consensus: "Highly encouraged. Treating, curing, and alleviating pain in animals is universally recognized as rewarding in Shariah."
+        },
+        alternatives: "N/A",
+        risks: "None. Touching impure animals (like swine/dogs) for clinical treatment is fully excused in jurisprudence."
+      },
+      {
+        title: "Public Health Epidemiologist",
+        industry: "Medicine",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 2:195 ('And spend in the way of Allah and do not throw [yourselves] with your own hands into destruction...').",
+          hadith: "The Prophet's instruction regarding quarantine: 'If you hear of an outbreak of plague in a land, do not enter it...' (Bukhari)",
+          consensus: "Highly encouraged. Modeling disease vectors and planning pandemic protocols is vital for the preservation of human life."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Prosthetic Device Engineer",
+        industry: "Medicine",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 4:119 (forbidden alteration of God's physical creation versus restoring native function).",
+          hadith: "The Prophet (PBUH) permitted Arfajah to make a nose of gold after his nose was cut off at the battle of Kulab (Abu Dawud).",
+          consensus: "Universally permissible. Restoring lost human limbs or faculties is considered remedial therapy (ilaj) and is highly praised."
+        },
+        alternatives: "N/A",
+        risks: "Low."
+      },
+      {
+        title: "Sports Physical Therapist",
+        industry: "Medicine",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 2:233 (focusing on physical nursing and physical capability).",
+          hadith: "The Prophet (PBUH) said: 'The strong believer is better and more beloved to Allah than the weak believer.' (Muslim)",
+          consensus: "Permissible. Physical rehabilitation to restore movement and strength is beneficial."
+        },
+        alternatives: "Maintain clinic gender separation protocols when dealing with tactile physical therapy.",
+        risks: "Adhering to Islamic modesty boundaries regarding touching and exposing nakedness (awrah)."
+      },
+      {
+        title: "Dentist & Orthodontist",
+        industry: "Medicine",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 95:4 ('We have certainly created man in the best of stature').",
+          hadith: "The Prophet (PBUH) said: 'The Siwak (tooth-stick) is cleansing for the mouth and pleasing to the Lord.' (Nasa'i)",
+          consensus: "Permissible. Restorative dentistry is commendable. Purely cosmetic dentistry (unnecessary manipulation of healthy teeth) is highly discouraged unless fixing a severe genetic deformity."
+        },
+        alternatives: "N/A",
+        risks: "Practitioner must differentiate between medically necessary reconstruction versus vanity-driven teeth filing."
+      },
+      {
+        title: "Clinical Nutritionist & Dietitian",
+        industry: "Medicine",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 7:31 ('...and eat and drink, but be not excessive. Indeed, He likes not those who commit excess').",
+          hadith: "The Prophet (PBUH) said: 'The son of Adam does not fill any vessel worse than his stomach.'",
+          consensus: "Halal. Educating populations on healthy lifestyle, balanced diet, and preventative nutrition is highly beneficial."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+
+      // CATEGORY 4: ENGINEERING, INFRASTRUCTURE & BUILT ENVIRONMENT (31-40)
+      {
+        title: "Solar Energy Grid Infrastructure Engineer",
+        industry: "Engineering",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 6:165 ('And it is He who has made you successors upon the earth...').",
+          hadith: "The Prophet (PBUH) forbade wasting water even if at a running river.",
+          consensus: "Highly recommended. Developing renewable green energy grids directly preserves the earth's climate ecosystems (Al-Mizan) and prevents environmental harm."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Nuclear Reactor Safety Analyst",
+        industry: "Engineering",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 2:205 ('And when he turns away, he strives throughout the land to cause corruption therein and destroy crops and animals...').",
+          hadith: "Preventing harm takes precedence over bringing benefits.",
+          consensus: "Highly recommended. Maintaining reactor safety systems is vital for the protection of millions of human lives and habitats."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Petroleum Reservoir Engineer",
+        industry: "Engineering",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 14:32-34 (Allah subjected for you the ships... and the rivers... and the sun and the moon).",
+          hadith: "Appointing skilled mining and metal resource extractors.",
+          consensus: "Permissible by default. Extracting natural fuel sources is a fundamental industrial utility."
+        },
+        alternatives: "N/A",
+        risks: "Low, provided the operations comply with safety standards to prevent catastrophic ecological contamination."
+      },
+      {
+        title: "Civil Structural Engineer (Public Transit)",
+        industry: "Engineering",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 18:96 ('Bring me sheets of iron... until he made it [like] fire, he said, \"Bring me that I may pour over it molten copper\"' - Story of Dhul-Qarnayn's wall).",
+          hadith: "Alleviating obstacles and creating pathways for public transit.",
+          consensus: "Highly commendable. Designing safe, resilient structures, bridges, and rail networks serves the basic welfare of the citizenry."
+        },
+        alternatives: "N/A",
+        risks: "Structural integrity calculations must be impeccable to prevent loss of life."
+      },
+      {
+        title: "Aerospace Structural Architect",
+        industry: "Engineering",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 67:19 ('Do they not see the birds above them, spreading their wings and folding them in?').",
+          hadith: "The Prophet (PBUH) utilized technological innovations in warfare and defensive structures.",
+          consensus: "Permissible by default. Developing aerospace vehicles for commercial shipping or exploration is a clean science."
+        },
+        alternatives: "N/A",
+        risks: "Avoid building weapons structures destined for unlawful military aggression."
+      },
+      {
+        title: "Urban Planning & Smart City Designer",
+        industry: "Engineering",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 25:10 ('Blessed is He who... will make for you castles and make for you rivers').",
+          hadith: "Establishing standard layout widths for pathways and streets in Madinah.",
+          consensus: "Permissible. Promoting human welfare, waste management, and accessible spaces is highly aligned with societal goals."
+        },
+        alternatives: "N/A",
+        risks: "Ensure designs do not zone or actively facilitate casinos, red-light areas, or massive conventional commercial banks."
+      },
+      {
+        title: "Agricultural Drone Systems Specialist",
+        industry: "Engineering",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 6:141 ('And He it is who causes gardens to grow, trellised and untrellised...').",
+          hadith: "The Prophet (PBUH) encouraged planting seeds.",
+          consensus: "Permissible. Merging robotic surveillance with crop irrigation increases public food security."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Oceanographic Marine Salvage Engineer",
+        industry: "Engineering",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 16:14 ('And it is He who subjected the sea for you to eat from it tender meat and to extract from it ornaments which you wear').",
+          hadith: "Prophet's travels and maritime journeys by his companions.",
+          consensus: "Permissible. Recovering vessels and removing hazards from international shipping lanes is beneficial."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Mine Ventilation Safety Specialist",
+        industry: "Engineering",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 16:112 (examples of physical safety and security).",
+          hadith: "Protecting laborers from hazardous environments.",
+          consensus: "Commendable. Securing mine corridors to prevent mass carbon monoxide poisoning or cave-ins is a noble pursuit of safety."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "HVAC Energy Efficiency Consultant",
+        industry: "Engineering",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 17:27 ('Indeed, the wasteful are brothers of the devils').",
+          hadith: "Encouraging moderation and efficiency.",
+          consensus: "Permissible. Restructuring massive building climate plants to minimize fossil-fuel consumption is clean."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+
+      // CATEGORY 5: LAW, ADVOCACY, EDUCATION & CREATIVE (41-51)
+      {
+        title: "Intellectual Property Attorney",
+        industry: "Law",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 2:188 ('And do not consume one another's wealth unjustly...').",
+          hadith: "The Prophet (PBUH) said: 'The property of a Muslim is sacred.' (Bukhari)",
+          consensus: "Permissible. Modern Islamic Councils have affirmed that intangible assets (copyright, patents) are protected property (mal) that must be defended under law."
+        },
+        alternatives: "N/A",
+        risks: "Avoid enforcing predatory patent troll policies that lock away vital life-saving medical discoveries."
+      },
+      {
+        title: "Criminal Defense Attorney",
+        industry: "Law",
+        status: "Conditional / Susceptible",
+        evidences: {
+          quran: "Qur'an 4:105 ('And do not be for the deceitful an advocate').",
+          hadith: "The Prophet (PBUH) said: 'He who assists in a dispute unjustly, the anger of Allah remains upon him until he ceases.'",
+          consensus: "Permissible if defending a client to ensure a fair trial, prevent false convictions, and maintain justice. Haram if the lawyer knowingly defends and plots to acquit a client known to be guilty."
+        },
+        alternatives: "Shift practice into civil arbitration, public prosecution, labor rights, or family estate reconciliation.",
+        risks: "Extreme ethical risk of knowingly presenting false narratives to protect a criminal."
+      },
+      {
+        title: "Corporate Anti-Money Laundering Compliance Officer",
+        industry: "Law",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 4:29 (Consuming wealth unjustly) and preventing black-market criminality.",
+          hadith: "The duty of correcting public wrongs: 'Whoever among you sees an evil, let him change it...'.",
+          consensus: "Highly recommended. Halting financial terrorism, drug cartels, and human trafficking is classified under the preservation of human life and society."
+        },
+        alternatives: "N/A",
+        risks: "Low risk. Ensure complete clinical documentation is processed with integrity."
+      },
+      {
+        title: "Classical Calligrapher & Quranic Typographer",
+        industry: "Creative",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 96:4-5 ('Who taught by the pen - taught man that which he knew not').",
+          hadith: "The Prophet (PBUH) encouraged beautifully writing down revelation (Wahm).",
+          consensus: "Highly praised. Copying the word of God, or creating non-figural Arabic calligraphy for mosque structures is a form of spiritual service."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Portrait Sculptor & Figural Artist",
+        industry: "Creative",
+        status: "Haram / Prohibited",
+        evidences: {
+          quran: "Qur'an 5:90 ('...and stone altars and divining arrows are but defilement from the work of Satan...').",
+          hadith: "The Prophet (PBUH) said: 'The people who will receive the severest punishment on the Day of Resurrection will be those who model pictures (idolatry context).' (Bukhari)",
+          consensus: "Historically, the classical majority school prohibits rendering complete physical three-dimensional human/animal figures with distinct features, due to risks of idolatry. Contemporary views allow abstract, headless, or digital modeling."
+        },
+        alternatives: "Specialize in floral patterns (arabesque), abstract architecture, structural interior design, or industrial object modeling.",
+        risks: "Direct representation and modeling of life-forms that emulate the creation of God."
+      },
+      {
+        title: "Secondary School Arabic & Quranic Educator",
+        industry: "Education",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 55:1-2 ('The Most Merciful taught the Qur'an').",
+          hadith: "The Prophet (PBUH) said: 'The best among you are those who learn the Quran and teach it.' (Bukhari)",
+          consensus: "Fard Kifayah. Preserving the language and understanding of the classical Islamic sciences for the next generation is highly praiseworthy."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Music Producer & Audio Engineer (Musical Instruments Focus)",
+        industry: "Creative",
+        status: "Haram / Prohibited",
+        evidences: {
+          quran: "Qur'an 31:6 ('And of the people is he who buys the amusement of speech...').",
+          hadith: "The Prophet (PBUH) said: 'There will be among my Ummah people who will regard as permissible adultery, silk, alcohol, and musical instruments.' (Bukhari)",
+          consensus: "The classical four legal schools (Hanafi, Maliki, Shafi'i, Hanbali) prohibit commercial production involving wind, stringed, or synthetic musical instruments, while allowing certain simple percussion (daff) for weddings."
+        },
+        alternatives: "Operate as a sound designer for film effects (foley), recording non-musical vocal voiceovers, audiobooks, podcasts, or corporate presentations.",
+        risks: "Direct record-keeping and production of instruments deemed impermissible by classical majority."
+      },
+      {
+        title: "Voiceover Artist for Educational Media",
+        industry: "Creative",
+        status: "Halal (Default Mubāh)",
+        evidences: {
+          quran: "Qur'an 33:32 ('...then be not soft in speech [to men] lest he in whose heart is a disease should covet... but speak with appropriate words').",
+          hadith: "Use of eloquent speech for educational propagation.",
+          consensus: "Permissible provided the voiceover content is informative, decent, and free of blasphemy or obscene narratives."
+        },
+        alternatives: "N/A",
+        risks: "Minimal. Avoid projects promoting prohibited services or products."
+      },
+      {
+        title: "Clinical Child Psychologist",
+        industry: "Education",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 91:7-8 ('And [by] the soul and He who proportioned it and inspired it [with discernment of] its wickedness and its righteousness').",
+          hadith: "The Prophet (PBUH) demonstrated mercy towards children and encouraged parental mental stability.",
+          consensus: "Highly recommended. Helping children navigate developmental trauma and emotional disorders preserves the intellect (Aql) and lineage (Nasl)."
+        },
+        alternatives: "N/A",
+        risks: "Must ensure therapeutic methodologies do not enforce secular moral values that contradict clear Islamic principles."
+      },
+      {
+        title: "Agri-Tech Food Science Inspector (Halal Verification)",
+        industry: "Education",
+        status: "Halal (Highly Commendable)",
+        evidences: {
+          quran: "Qur'an 2:168 ('O mankind, eat from whatever is on earth [that is] lawful and good...').",
+          hadith: "Prophet's checks on market items to ensure separation of wet wheat (deception).",
+          consensus: "Fard Kifayah. Checking supply lines for contamination by swine, blood, or non-slaughtered animal derivatives is highly praised."
+        },
+        alternatives: "N/A",
+        risks: "None."
+      },
+      {
+        title: "Waqf Estate & Will Advisor",
+        industry: "Law",
+        status: "Halal (Recommended)",
+        evidences: {
+          quran: "Qur'an 2:180 ('Prescribed for you when death approaches any of you... is to make a bequest...').",
+          hadith: "The Prophet (PBUH) said: 'It is the duty of a Muslim who has something to bequeath not to let two nights pass without writing a will.'",
+          consensus: "Highly encouraged. Helping families set up lawful estate distributions according to classical Islamic inheritance jurisprudence (Mawarith) prevents domestic conflict and ensures Shariah obedience."
+        },
+        alternatives: "N/A",
+        risks: "Must remain fully updated on the exact math ratios decreed in Surah An-Nisa."
+      }
+    ];
+
+    // CURRENT STATE
+    let SELECTED_A_LEVELS = ["math", "phys", "comp_sci"];
+    const CURRENT_GRADES = {
+      math: "A",
+      phys: "B",
+      comp_sci: "B"
+    };
+    let ACTIVE_FIQH_FILTER = "all";
+
+    window.onload = function() {
+      renderALevelCheckboxes();
+      applyFilters();
+      runIBCCCalculation();
+      renderFiqhDirectory();
+      
+      // Update Stats indicators
+      document.getElementById('stat-uni-count').innerText = `${UNIVERSITIES.length} Global HEIs`;
+      document.getElementById('stat-career-count').innerText = `${SHARIAH_CAREERS.length} Canonical Careers`;
+    };
+
+    // TAB MANAGEMENT
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+      document.querySelectorAll('.nav-tab').forEach(btn => {
+        btn.classList.remove('text-emerald-400', 'bg-slate-900/50', 'border', 'border-emerald-500/20');
+        btn.classList.add('text-slate-400', 'hover:text-slate-200', 'hover:bg-slate-900');
+      });
+
+      const targetTab = document.getElementById(`tab-${tabId}`);
+      if (targetTab) {
+        targetTab.classList.remove('hidden');
+      }
+
+      const activeBtn = document.getElementById(`btn-tab-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.add('text-emerald-400', 'bg-slate-900/50', 'border', 'border-emerald-500/20');
+        activeBtn.classList.remove('text-slate-400', 'hover:text-slate-200', 'hover:bg-slate-900');
+      }
+    }
+
+    // GRADE INTERFACE RENDERER
+    function renderALevelCheckboxes() {
+      const container = document.getElementById('a-level-checkboxes-container');
+      container.innerHTML = "";
+
+      A_LEVEL_SUBJECTS.forEach(sub => {
+        const isChecked = SELECTED_A_LEVELS.includes(sub.id);
+        const currentGrade = CURRENT_GRADES[sub.id] || "A";
+
+        const div = document.createElement('div');
+        div.className = "flex items-center justify-between bg-slate-950 p-2.5 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors";
+        div.innerHTML = `
+          <div class="flex items-center gap-2">
+            <input type="checkbox" id="chk-${sub.id}" ${isChecked ? 'checked' : ''} onchange="toggleSubject('${sub.id}')" class="rounded text-emerald-600 focus:ring-emerald-500 bg-slate-900 border-slate-800">
+            <label for="chk-${sub.id}" class="text-xs font-semibold text-slate-200">${sub.name}</label>
+          </div>
+          ${isChecked ? `
+            <select onchange="updateGrade('${sub.id}', this.value)" class="bg-slate-900 border border-slate-800 rounded px-1 py-0.5 text-[10px] font-mono text-emerald-400">
+              <option value="A*" ${currentGrade === 'A*' ? 'selected' : ''}>A*</option>
+              <option value="A" ${currentGrade === 'A' ? 'selected' : ''}>A</option>
+              <option value="B" ${currentGrade === 'B' ? 'selected' : ''}>B</option>
+              <option value="C" ${currentGrade === 'C' ? 'selected' : ''}>C</option>
+              <option value="D" ${currentGrade === 'D' ? 'selected' : ''}>D</option>
+              <option value="E" ${currentGrade === 'E' ? 'selected' : ''}>E</option>
+            </select>
+          ` : ''}
+        `;
+        container.appendChild(div);
+      });
+
+      calculateScoreMetric();
+    }
+
+    function toggleSubject(subjectId) {
+      if (SELECTED_A_LEVELS.includes(subjectId)) {
+        SELECTED_A_LEVELS = SELECTED_A_LEVELS.filter(id => id !== subjectId);
+        delete CURRENT_GRADES[subjectId];
+      } else {
+        SELECTED_A_LEVELS.push(subjectId);
+        CURRENT_GRADES[subjectId] = "A";
+      }
+      renderALevelCheckboxes();
+      applyFilters();
+    }
+
+    function updateGrade(subjectId, grade) {
+      CURRENT_GRADES[subjectId] = grade;
+      calculateScoreMetric();
+      applyFilters();
+    }
+
+    function calculateScoreMetric() {
+      let totalUcas = 0;
+      SELECTED_A_LEVELS.forEach(id => {
+        const grade = CURRENT_GRADES[id] || "A";
+        const subData = A_LEVEL_SUBJECTS.find(s => s.id === id);
+        if (subData) {
+          totalUcas += subData.ucasPoints[grade] || 0;
+        }
+      });
+
+      document.getElementById('ucas-score-display').innerText = `${totalUcas} Points`;
+
+      if (SELECTED_A_LEVELS.length >= 3) {
+        let totalVal = 0;
+        SELECTED_A_LEVELS.slice(0, 3).forEach(id => {
+          const g = CURRENT_GRADES[id];
+          if (g === "A*") totalVal += 90;
+          else if (g === "A") totalVal += 85;
+          else if (g === "B") totalVal += 75;
+          else if (g === "C") totalVal += 65;
+          else totalVal += 55;
+        });
+        const pct = Math.round((totalVal / 270) * 100);
+        document.getElementById('ibcc-est-display').innerText = `Est ${pct}% IBCC`;
+      } else {
+        document.getElementById('ibcc-est-display').innerText = "Select min 3 subjects";
+      }
+    }
+
+    function resetFilters() {
+      SELECTED_A_LEVELS = ["math", "phys", "comp_sci"];
+      Object.keys(CURRENT_GRADES).forEach(k => delete CURRENT_GRADES[k]);
+      CURRENT_GRADES.math = "A";
+      CURRENT_GRADES.phys = "B";
+      CURRENT_GRADES.comp_sci = "B";
+
+      document.getElementById('filter-budget').value = "all";
+      document.getElementById('filter-region').value = "all";
+      document.getElementById('main-search-input').value = "";
+
+      renderALevelCheckboxes();
+      applyFilters();
+    }
+
+    // MAIN EXPLORER FILTER
+    function applyFilters() {
+      const budgetLimit = document.getElementById('filter-budget').value;
+      const regionVal = document.getElementById('filter-region').value;
+      const searchInput = document.getElementById('main-search-input').value.toLowerCase();
+
+      let currentUcas = 0;
+      SELECTED_A_LEVELS.forEach(id => {
+        const g = CURRENT_GRADES[id] || "A";
+        const sub = A_LEVEL_SUBJECTS.find(s => s.id === id);
+        if (sub) currentUcas += sub.ucasPoints[g];
+      });
+
+      const container = document.getElementById('dynamic-results-container');
+      container.innerHTML = "";
+
+      let count = 0;
+
+      UNIVERSITIES.forEach(uni => {
+        if (budgetLimit !== "all" && uni.budgetYearly > parseInt(budgetLimit)) return;
+        if (regionVal !== "all" && uni.region !== regionVal) return;
+
+        const textToMatch = `${uni.name} ${uni.location} ${uni.programs.map(p => p.name).join(' ')}`.toLowerCase();
+        if (searchInput && !textToMatch.includes(searchInput)) return;
+
+        count++;
+
+        const ucard = document.createElement('div');
+        ucard.className = "bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition-all duration-300";
+        
+        let programListHtml = "";
+        uni.programs.forEach(prog => {
+          programListHtml += `
+            <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div>
+                <span class="text-xs font-bold text-emerald-400 block">${prog.name}</span>
+                <span class="text-[10px] text-slate-400">Prerequisite: ${prog.requirements}</span>
+              </div>
+              <span class="text-[10px] bg-slate-900 text-slate-300 font-bold px-2.5 py-1 rounded border border-slate-800 uppercase tracking-widest">${prog.rate} Rate</span>
+            </div>
+          `;
+        });
+
+        const meetsRequirement = currentUcas >= uni.minUcas;
+        const eligibilityBadge = meetsRequirement 
+          ? `<span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-circle-check mr-1"></i> Eligible (Points Met)</span>`
+          : `<span class="bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-bold px-3 py-1 rounded-full"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Requires ${uni.minUcas - currentUcas} more points</span>`;
+
+        ucard.innerHTML = `
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-4 border-b border-slate-800">
+            <div>
+              <h4 class="text-base font-extrabold text-slate-100">${uni.name}</h4>
+              <p class="text-xs text-slate-400"><i class="fa-solid fa-location-dot mr-1 text-slate-500"></i> ${uni.location}</p>
+            </div>
+            ${eligibilityBadge}
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-4 text-xs">
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Min UCAS Tariff</span>
+              <span class="font-bold text-slate-200">${uni.minUcas} Points Required</span>
+            </div>
+            <div>
+              <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Est. Annual Tuition</span>
+              <span class="font-bold text-emerald-400 font-mono">${uni.budgetYearly === 0 ? "Fully Funded" : `$${uni.budgetYearly.toLocaleString()}/yr`}</span>
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">O-Level Equivalence Rules</span>
+              <span class="text-slate-300 text-[10px] leading-snug block">${uni.olevelRule.substring(0,65)}...</span>
+            </div>
+          </div>
+
+          <div class="space-y-2 mt-2">
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Available Degree Streams & Prerequisites</span>
+            ${programListHtml}
+          </div>
+
+          <div class="pt-4 mt-4 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <span class="text-[10px] text-slate-400"><i class="fa-solid fa-gift mr-1 text-emerald-500"></i> Aid Policy: ${uni.scholarships}</span>
+            <a href="${uni.admissionUrl}" target="_blank" class="w-full sm:w-auto text-center px-4 py-2 bg-slate-950 hover:bg-slate-900 border border-slate-800 text-xs font-bold text-slate-200 rounded-lg transition-all">
+              <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Admissions Portal
+            </a>
+          </div>
+        `;
+        container.appendChild(ucard);
+      });
+
+      document.getElementById('match-count').innerText = count;
+      if (count === 0) {
+        container.innerHTML = `
+          <div class="text-center py-12 bg-slate-900 border border-slate-800 rounded-2xl">
+            <i class="fa-solid fa-circle-question text-3xl text-slate-600 mb-3 block"></i>
+            <span class="text-slate-400 text-sm font-semibold block">No institutions matched your current selection metrics</span>
+            <span class="text-slate-500 text-xs mt-1 block">Try enabling more subjects or adjusting budget sliders.</span>
+          </div>
+        `;
+      }
+    }
+
+    // FIQH COMPLIANCE FILTER MATRIX ENGINE
+    function filterFiqhList(statusGroup) {
+      ACTIVE_FIQH_FILTER = statusGroup;
+      
+      // Update filter active classes
+      document.querySelectorAll('.fiqh-filter-btn').forEach(btn => {
+        btn.className = "fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-950 text-slate-400 hover:text-slate-200 border border-slate-800";
+      });
+
+      if (statusGroup === 'all') {
+        document.getElementById('f-btn-all').className = "fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-slate-950";
+      } else if (statusGroup === 'Halal') {
+        document.getElementById('f-btn-halal').className = "fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-slate-950";
+      } else if (statusGroup === 'Conditional') {
+        document.getElementById('f-btn-cond').className = "fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-slate-950";
+      } else if (statusGroup === 'Haram') {
+        document.getElementById('f-btn-haram').className = "fiqh-filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-slate-950";
+      }
+
+      renderFiqhDirectory();
+    }
+
+    function renderFiqhDirectory() {
+      const container = document.getElementById('fiqh-directory-cards');
+      const searchVal = document.getElementById('fiqh-search-input').value.toLowerCase();
+      container.innerHTML = "";
+
+      let displayedCount = 0;
+
+      SHARIAH_CAREERS.forEach(item => {
+        // Class mapping filter matching
+        if (ACTIVE_FIQH_FILTER !== "all") {
+          const matchesHalal = ACTIVE_FIQH_FILTER === "Halal" && item.status.includes("Halal");
+          const matchesCond = ACTIVE_FIQH_FILTER === "Conditional" && item.status.includes("Conditional");
+          const matchesHaram = ACTIVE_FIQH_FILTER === "Haram" && (item.status.includes("Haram") || item.status.includes("Prohibited"));
+          
+          if (!matchesHalal && !matchesCond && !matchesHaram) return;
+        }
+
+        // Search match matching
+        if (searchVal) {
+          const matchString = `${item.title} ${item.industry} ${item.status} ${item.alternatives}`.toLowerCase();
+          if (!matchString.includes(searchVal)) return;
+        }
+
+        displayedCount++;
+
+        const div = document.createElement('div');
+        div.className = "bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4 hover:border-slate-700 transition-colors duration-300 flex flex-col justify-between";
+
+        let statusBadgeClass = "bg-emerald-500/10 border border-emerald-500/20 text-emerald-400";
+        if (item.status.includes("Haram") || item.status.includes("Prohibited")) {
+          statusBadgeClass = "bg-rose-500/10 border border-rose-500/20 text-rose-400";
+        } else if (item.status.includes("Conditional")) {
+          statusBadgeClass = "bg-amber-500/10 border border-amber-500/20 text-amber-400";
+        }
+
+        div.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between pb-3 border-b border-slate-800 gap-2">
+              <div>
+                <h4 class="font-bold text-sm text-slate-100">${item.title}</h4>
+                <span class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Sector: ${item.industry}</span>
+              </div>
+              <span class="text-[10px] font-bold px-2.5 py-1 rounded-full border uppercase tracking-widest shrink-0 ${statusBadgeClass}">${item.status}</span>
+            </div>
+
+            <div class="space-y-3.5 text-xs py-4">
+              <div>
+                <span class="text-[10px] text-emerald-400 font-extrabold uppercase tracking-widest block mb-0.5"><i class="fa-solid fa-book-open text-[9px] mr-1"></i> Qur'anic Base Reference</span>
+                <p class="text-slate-300 leading-snug font-medium italic">"${item.evidences.quran}"</p>
+              </div>
+              <div>
+                <span class="text-[10px] text-teal-400 font-extrabold uppercase tracking-widest block mb-0.5"><i class="fa-solid fa-quote-left text-[9px] mr-1"></i> Sunnah / Hadith Proof</span>
+                <p class="text-slate-300 leading-snug font-medium italic">"${item.evidences.hadith}"</p>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-500 font-extrabold uppercase tracking-widest block mb-0.5"><i class="fa-solid fa-users text-[9px] mr-1"></i> Ijma' / Scholarly Precedent</span>
+                <p class="text-slate-400 leading-snug">${item.evidences.consensus}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 text-[11px] text-slate-400 leading-relaxed">
+            <span class="font-bold text-slate-300 block mb-1"><i class="fa-solid fa-shuffle text-emerald-500 mr-1"></i> Substitution / Compliance Risks</span>
+            ${item.alternatives}
+          </div>
+        `;
+        container.appendChild(div);
+      });
+
+      document.getElementById('fiqh-count-span').innerText = displayedCount;
+    }
+
+    // SHARIAH LEXICAL SANDBOX AUDITING ENGINE
+    function fillScannerDemo(value) {
+      document.getElementById('scanner-input').value = value;
+    }
+
+    function triggerLexicalScan() {
+      const text = document.getElementById('scanner-input').value.trim();
+      const display = document.getElementById('scanner-result');
+      if (!text) return;
+
+      display.classList.remove('hidden');
+      display.innerHTML = `
+        <div class="flex items-center gap-2 justify-center py-4 text-xs text-slate-400">
+          <i class="fa-solid fa-circle-notch animate-spin text-emerald-500"></i>
+          <span>Performing comprehensive lexical audit scan against 50+ relational indices...</span>
+        </div>
+      `;
+
+      setTimeout(() => {
+        const lc = text.toLowerCase();
+        let matchedRole = null;
+
+        // Try to find exact or near match in our 51 careers database
+        for (let i = 0; i < SHARIAH_CAREERS.length; i++) {
+          const titleParts = SHARIAH_CAREERS[i].title.toLowerCase().split(' ');
+          const titleMatched = titleParts.every(part => part.length < 3 || lc.includes(part));
+          if (lc.includes(SHARIAH_CAREERS[i].title.toLowerCase()) || titleMatched) {
+            matchedRole = SHARIAH_CAREERS[i];
+            break;
+          }
+        }
+
+        let riskScore = 0;
+        let warnings = [];
+        let advice = "";
+
+        if (matchedRole) {
+          if (matchedRole.status.includes("Haram") || matchedRole.status.includes("Prohibited")) {
+            riskScore = 95;
+            warnings.push(`Matched known high-risk compliance database category: [${matchedRole.title}].`);
+            advice = matchedRole.alternatives;
+          } else if (matchedRole.status.includes("Conditional")) {
+            riskScore = 55;
+            warnings.push(`Matched conditional compliance profile: [${matchedRole.title}]. Requiring adherence to transactional parameters.`);
+            advice = matchedRole.alternatives;
+          } else {
+            riskScore = 5;
+            warnings.push(`No active compliance alerts. Sector categorized as: [${matchedRole.title}]. Default permissibility remains active.`);
+            advice = "Role is deemed Mubāh (Permissible) by default. Avoid assisting in un-Islamic secondary tasks.";
+          }
+        } else {
+          // Rule-based fallback if no direct match in database
+          if (lc.includes("derivative") || lc.includes("speculation") || lc.includes("bond") || lc.includes("options") || lc.includes("leverage") || lc.includes("casino") || lc.includes("gambling")) {
+            riskScore = 90;
+            warnings.push("Identified high-probability prohibited lexical markers: (speculation, leverage, interest).");
+            advice = "Look into Islamic Finance capital markets, solid project-management consulting, or software development in non-financial sectors.";
+          } else if (lc.includes("audit") || lc.includes("compliance") || lc.includes("accounting") || lc.includes("lawyer")) {
+            riskScore = 40;
+            warnings.push("Identified professional support/compliance indicators. These careers are generally permissible, but the operational environment must not mandate the generation or direct execution of interest ledger items.");
+            advice = "Ensure your client roster or corporate business models deal predominantly in lawful physical products or services.";
+          } else {
+            riskScore = 15;
+            warnings.push("No explicit prohibited financial or commercial indicators found in query string.");
+            advice = "Standard occupational parameters indicate this is Halal (Permissible by default). Verify individual client content before launching projects.";
+          }
+        }
+
+        let statusColor = "text-emerald-400 border-emerald-500/20 bg-emerald-950/20";
+        let statusTitle = "Highly Compliant / Low Risk";
+
+        if (riskScore >= 40 && riskScore < 80) {
+          statusColor = "text-amber-400 border-amber-500/20 bg-amber-950/20";
+          statusTitle = "Conditional Approval / Audit Suggested";
+        } else if (riskScore >= 80) {
+          statusColor = "text-rose-400 border-rose-500/20 bg-rose-950/20";
+          statusTitle = "Severe Structural Non-Compliance Detected";
+        }
+
+        display.innerHTML = `
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-3 border-b border-slate-800">
+            <div>
+              <span class="text-[10px] text-slate-500 uppercase tracking-widest block font-bold">Lexical Scanner Result for</span>
+              <span class="text-sm font-extrabold text-slate-200">"${text}"</span>
+            </div>
+            <div class="border px-3 py-1.5 rounded-lg text-xs font-bold ${statusColor}">
+              ${statusTitle} (Risk Index: ${riskScore}%)
+            </div>
+          </div>
+
+          <div class="space-y-4 pt-4 text-xs">
+            <div>
+              <span class="font-bold text-slate-300 block mb-1">Audit Findings:</span>
+              <ul class="list-disc list-inside space-y-1 text-slate-400 pl-1">
+                ${warnings.map(w => `<li>${w}</li>`).join('')}
+              </ul>
+            </div>
+
+            <div class="bg-slate-900/50 p-3 rounded-xl border border-slate-800">
+              <span class="font-bold text-emerald-400 block mb-1"><i class="fa-solid fa-route text-[10px] mr-1"></i> Suggested Halal Progression Route:</span>
+              <p class="text-slate-300 leading-relaxed">${advice}</p>
+            </div>
+          </div>
+        `;
+      }, 600);
+    }
+
+    // PAKISTAN IBCC CALCULATOR ENGINE
+    function runIBCCCalculation() {
+      const a1 = document.getElementById('ibcc-a1').value;
+      const a2 = document.getElementById('ibcc-a2').value;
+      const a3 = document.getElementById('ibcc-a3').value;
+
+      const o1 = document.getElementById('ibcc-o1').value;
+      const o2 = document.getElementById('ibcc-o2').value;
+      const o3 = document.getElementById('ibcc-o3').value;
+      const o4 = document.getElementById('ibcc-o4').value;
+      const o5 = document.getElementById('ibcc-o5').value;
+      const o6 = document.getElementById('ibcc-o6').value;
+      const o7 = document.getElementById('ibcc-o7').value;
+      const o8 = document.getElementById('ibcc-o8').value;
+
+      const getGradeMarks = (g) => {
+        if (g === "A*") return 90;
+        if (g === "A") return 85;
+        if (g === "B") return 75;
+        if (g === "C") return 65;
+        if (g === "D") return 55;
+        return 45;
+      };
+
+      const oSum = getGradeMarks(o1) + getGradeMarks(o2) + getGradeMarks(o3) + getGradeMarks(o4) + getGradeMarks(o5) + getGradeMarks(o6) + getGradeMarks(o7) + getGradeMarks(o8);
+      const aSum = getGradeMarks(a1) + getGradeMarks(a2) + getGradeMarks(a3);
+
+      document.getElementById('ibcc-o-marks-display').innerText = `${oSum}`;
+      document.getElementById('ibcc-a-marks-display').innerText = `${aSum}`;
+
+      const combinedMarks = oSum + aSum;
+      const percentage = Math.round((combinedMarks / 1100) * 100);
+
+      document.getElementById('ibcc-total-percentage-display').innerText = `${percentage}%`;
+    }
+
+    // GEMINI 2.5 API SYSTEM COUPLING
+    const apiKey = ""; // populates dynamically in environment context
+
+    function setCounselorQuestion(text) {
+      document.getElementById('counselor-chat-input').value = text;
+    }
+
+    async function handleCounselorSubmit(e) {
+      e.preventDefault();
+      const inputField = document.getElementById('counselor-chat-input');
+      const userMessage = inputField.value.trim();
+      if (!userMessage) return;
+
+      inputField.value = "";
+      appendChatMessage("user", userMessage);
+
+      const loadingId = appendChatMessage("ai-loading", "Accessing primary Islamic Jurisprudential database consensus...");
+
+      try {
+        const responseText = await callGeminiAPI(userMessage);
+        removeChatLoadingMessage(loadingId);
+        appendChatMessage("ai", responseText);
+      } catch (err) {
+        removeChatLoadingMessage(loadingId);
+        appendChatMessage("ai", "I am currently unable to establish connection to the primary AI node. Please query me in a few moments or refer directly to the static Fiqh Matrix directory tab.");
+      }
+    }
+
+    function appendChatMessage(sender, text) {
+      const log = document.getElementById('counselor-chat-log');
+      const id = "msg-" + Date.now();
+
+      const wrapper = document.createElement('div');
+      wrapper.id = id;
+      wrapper.className = `flex items-start gap-3 ${sender === 'user' ? 'justify-end' : ''}`;
+
+      if (sender === 'user') {
+        wrapper.innerHTML = `
+          <div class="bg-emerald-600 text-slate-950 font-semibold rounded-2xl rounded-tr-none p-4 max-w-[85%] text-xs leading-relaxed">
+            ${text}
+          </div>
+          <div class="h-8 w-8 rounded-lg bg-emerald-500/15 flex items-center justify-center text-emerald-400 shrink-0">
+            <i class="fa-solid fa-user text-xs"></i>
+          </div>
+        `;
+      } else if (sender === 'ai-loading') {
+        wrapper.innerHTML = `
+          <div class="h-8 w-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+            <i class="fa-solid fa-kaaba text-xs animate-spin"></i>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl rounded-tl-none p-4 max-w-[85%] text-xs text-slate-400 italic">
+            ${text}
+          </div>
+        `;
+      } else {
+        wrapper.innerHTML = `
+          <div class="h-8 w-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+            <i class="fa-solid fa-kaaba text-xs"></i>
+          </div>
+          <div class="bg-slate-950 border border-slate-800 rounded-2xl rounded-tl-none p-4 max-w-[85%] text-xs leading-relaxed text-slate-300 space-y-2">
+            ${text}
+          </div>
+        `;
+      }
+
+      log.appendChild(wrapper);
+      log.scrollTop = log.scrollHeight;
+      return id;
+    }
+
+    function removeChatLoadingMessage(id) {
+      const msg = document.getElementById(id);
+      if (msg) msg.remove();
+    }
+
+    async function callGeminiAPI(query) {
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+      const systemPrompt = `You are the expert counselor representing the Muslim Student Decision Intelligence Platform (MSDIP). 
+      You help high school/A-level students navigate eligibility rules, admissions parameters, and Shariah Fiqh implications for specific industries (like quantitative finance, machine learning, medicine, or environment). 
+      Format your response with clean spacing, paragraph breaks, and clearly label the "Permissibility Verdict" and the structural references (like Quran 2:275 or 5:2) whenever evaluating a career path. Reference the fact that MSDIP features over 50+ thoroughly researched static career paths.`;
+
+      const payload = {
+        contents: [{ parts: [{ text: query }] }],
+        systemInstruction: { parts: [{ text: systemPrompt }] }
+      };
+
+      let retries = 5;
+      let delay = 1000;
+
+      while (retries > 0) {
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          if (res.ok) {
+            const data = await res.json();
+            return data.candidates?.[0]?.content?.parts?.[0]?.text || "No response received.";
+          }
+        } catch (e) {
+          // dynamic recovery logic
+        }
+
+        retries--;
+        if (retries === 0) break;
+        await new Promise(resolve => setTimeout(resolve, delay));
+        delay *= 2;
+      }
+
+      throw new Error("API Connection Failure");
+    }
+  </script>
+
+</body>
+</html>
