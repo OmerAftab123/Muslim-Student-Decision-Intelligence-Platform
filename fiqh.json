@@ -1,0 +1,466 @@
+{
+  "themes": [
+    {
+      "id": "riba-finance",
+      "title": "Interest (Ribā) & Conventional Finance",
+      "programs": [
+        "accounting-finance"
+      ],
+      "summary": "The most extensively documented prohibition in Islamic commercial law. The Qur'an condemns ribā (interest/usury) in unusually severe terms, and mainstream fiqh extends this to interest charged or paid on conventional loans and bank deposits.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Permissible — bordering Recommended",
+        "explanation": "Learning how accounting, finance and conventional banking actually work is generally held permissible, and arguably recommended (even approaching a communal obligation, fard kifāyah), because the Muslim community needs people who understand these systems well enough to build Sharī'ah-compliant alternatives and to identify exactly what to avoid and why."
+      },
+      "practice": {
+        "tier": "haram",
+        "tier_label": "Forbidden (for the interest-bearing component specifically)",
+        "explanation": "Directly entering into, processing, or profiting from an interest-bearing contract — taking a loan at interest, working a role whose function is to lend or invest at interest, or auditing such income as legitimate revenue — is forbidden by the weight of the textual evidence. Accounting/finance roles that do not involve contracting or profiting from interest (e.g. bookkeeping for a permissible business, Islamic-finance-compliant audit, corporate finance for a halal company) fall back to permissible, and roles specifically building Sharī'ah-compliant alternatives are considered recommended."
+      },
+      "scholarly_note": "A minority of contemporary scholars permit narrow exceptions under genuine necessity (ḍarūrah) — for example, someone with no other available livelihood taking a non-contracting support role at a conventional bank temporarily while seeking an alternative. This is treated as an exception requiring real necessity, not a default position.",
+      "quran": [
+        {
+          "ref": "Al-Baqarah 2:275",
+          "quote": "Allah has permitted trade and forbidden interest.",
+          "note": "States the basic legal distinction between trade (ḥalāl) and ribā (ḥarām)."
+        },
+        {
+          "ref": "Al-Baqarah 2:278-279",
+          "quote": "be informed of a war against you from Allah and His Messenger",
+          "note": "A uniquely severe warning attached to persisting in ribā after the prohibition."
+        },
+        {
+          "ref": "Āli 'Imrān 3:130",
+          "quote": "do not consume interest, doubled and multiplied",
+          "note": "An earlier, Meccan-era condemnation of compounding interest."
+        }
+      ],
+      "hadith": [
+        {
+          "ref": "Sunan Ibn Mājah 2274",
+          "grade": "cited by classical commentators on the verse; widely reported",
+          "paraphrase": "Ribā has seventy doors, the least serious comparable to a man committing adultery with his own mother."
+        },
+        {
+          "ref": "widely reported across the hadith literature",
+          "grade": "—",
+          "paraphrase": "The consumer of ribā, the one who pays it, the witness, and the scribe who records it are described as equal in sin."
+        }
+      ],
+      "principle": "Ijmā': there is consensus across all major schools that ribā in the classical sense is prohibited; the live debate among contemporary scholars is only over which specific modern financial instruments meet that definition. Qiyās: most fiqh academies analogise modern bank interest to classical ribā al-nasī'ah (interest on deferred payment), since both involve a fixed, guaranteed increase on a loan regardless of the borrower's actual outcome.",
+      "fatwa_sources": [
+        {
+          "name": "Overview of the ribā prohibition and modern bank interest",
+          "url": "https://en.wikipedia.org/wiki/Riba",
+          "position": "Summarises the Qur'anic verses, hadith, and the range of classical and contemporary scholarly positions on defining ribā."
+        },
+        {
+          "name": "AAOIFI Sharī'ah Standards (Islamic finance)",
+          "url": "https://aaoifi.com/",
+          "position": "The body whose standards underpin most contemporary Islamic banking and finance practice."
+        }
+      ]
+    },
+    {
+      "id": "insurance-takaful",
+      "title": "Insurance, Gharar & Takāful",
+      "programs": [
+        "actuarial-science"
+      ],
+      "summary": "One of the rare areas of near-consensus among modern fiqh academies: conventional commercial insurance is ruled impermissible because it combines gharar (excessive uncertainty), ribā (interest on invested premiums) and maysir (a gambling-like structure). Takāful — cooperative, mutual-help insurance — is the sanctioned alternative.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Permissible — bordering Recommended",
+        "explanation": "Studying actuarial science, risk and probability is permissible in itself, and is arguably recommended given the real communal need for qualified Muslim actuaries to design and run Takāful operations — without them, the Sharī'ah-compliant insurance industry cannot function."
+      },
+      "practice": {
+        "tier": "mubah",
+        "tier_label": "Permissible (Takāful) / Forbidden (conventional commercial insurance)",
+        "explanation": "Working as an actuary for a Takāful or cooperative-insurance operator is permissible, and arguably recommended as a communal good. Working in a role that designs, prices or profits from conventional commercial insurance contracts is held impermissible by the majority position of the major fiqh academies."
+      },
+      "scholarly_note": "Some individual contemporary scholars allow conventional-insurance employment out of genuine necessity (e.g. no Takāful employer exists in a given country) or in non-contract-structuring support roles, but this is a minority allowance rather than the default ruling.",
+      "quran": [
+        {
+          "ref": "Al-Mā'idah 5:2",
+          "quote": "cooperate in righteousness and piety",
+          "note": "The basis cited for Takāful's mutual-help (ta'āwun) structure."
+        }
+      ],
+      "hadith": [
+        {
+          "ref": "Sahih Muslim 1513",
+          "grade": "Sahih",
+          "paraphrase": "The Messenger of Allah forbade the sale involving excessive uncertainty (gharar)."
+        }
+      ],
+      "principle": "Ijmā' al-fuqahā' (near-consensus of contemporary fiqh academies): commercial insurance is impermissible by default; cooperative/mutual insurance is permissible because contributions are treated as charitable donations (tabarru') rather than a sale of risk for profit.",
+      "fatwa_sources": [
+        {
+          "name": "International Islamic Fiqh Academy (OIC) — Resolution 9 (9/2), 1985",
+          "url": "https://iifa-aifi.org/en/33068.html",
+          "position": "Ruled conventional commercial insurance impermissible and cooperative insurance permissible; later resolutions (e.g. on medical insurance, 2005) refine the standard."
+        },
+        {
+          "name": "Takāful — background and Sharī'ah basis",
+          "url": "https://en.wikipedia.org/wiki/Takaful",
+          "position": "Overview of the scholarly consensus and the 1985 OIC ruling."
+        }
+      ]
+    },
+    {
+      "id": "medicine-healing",
+      "title": "Medicine & Healing",
+      "programs": [
+        "medicine",
+        "dentistry",
+        "veterinary-science",
+        "pharmacy",
+        "nursing"
+      ],
+      "summary": "Medicine is one of the most consistently praised fields of worldly knowledge in the Sunnah. The Prophet ﷺ explicitly instructed the Companions to seek treatment, on the basis that Allah does not create a disease without also creating its cure.",
+      "studying": {
+        "tier": "mustahab",
+        "tier_label": "Recommended — can become Obligatory (fard kifāyah) for the community",
+        "explanation": "Scholars commonly apply the principle that any beneficial worldly knowledge essential to communal welfare becomes a collective obligation (fard kifāyah): if a community lacks enough qualified doctors, dentists, pharmacists, nurses or vets, then some of its members must take up the field so the obligation is fulfilled on the community's behalf."
+      },
+      "practice": {
+        "tier": "mustahab",
+        "tier_label": "Recommended — can rise to Obligatory in shortage",
+        "explanation": "Practising medicine and allied health professions carries the same ruling as studying it. The standard caveats relate to general medical-ethics conditions (e.g. modesty/gender considerations in clinical care, avoiding treatments that rely on a clearly forbidden substance or method where a permissible alternative exists) rather than the discipline itself."
+      },
+      "quran": [
+        {
+          "ref": "Al-Isrā 17:82",
+          "quote": "We send down through this Qur'an that which is healing",
+          "note": "Cited by scholars discussing both spiritual and physical healing."
+        }
+      ],
+      "hadith": [
+        {
+          "ref": "Sahih al-Bukhari 5678 / Sunan Ibn Mājah 3436",
+          "grade": "Sahih",
+          "paraphrase": "Allah does not send down a disease without also sending down its cure; seek treatment."
+        }
+      ],
+      "principle": "Qiyās/maxim: classical and contemporary scholars (e.g. Shaykh Ibn al-'Uthaymīn) state the general rule that any beneficial science which does not contradict the Sharī'ah is permissible to study, 'and it may even be required if it benefits the Muslims' — medicine is the textbook example.",
+      "fatwa_sources": [
+        {
+          "name": "Hadith on seeking treatment, explained",
+          "url": "https://hadithanswers.com/hadith-allah-has-not-sent-down-any-sickness-but-has-also-sent-a-cure-for-it/",
+          "position": "Explains the authenticity and meaning of the 'disease and cure' hadith."
+        },
+        {
+          "name": "Should a Muslim consult a psychologist/doctor?",
+          "url": "https://islamqa.info/en/answers/380763",
+          "position": "Confirms there is nothing wrong in seeking treatment from a trustworthy, skilled medical professional."
+        }
+      ]
+    },
+    {
+      "id": "engineering-creation",
+      "title": "Engineering & the Stewardship of Creation",
+      "programs": [
+        "electrical-electronic-engineering",
+        "mechanical-engineering",
+        "civil-engineering",
+        "architecture",
+        "natural-sciences"
+      ],
+      "summary": "The Qur'an repeatedly frames the physical world as something placed at humanity's disposal to study, develop and benefit from responsibly — the basis scholars use for treating engineering and the natural sciences as a praiseworthy extension of human stewardship (khilāfah) over the earth.",
+      "studying": {
+        "tier": "mustahab",
+        "tier_label": "Recommended — can become Obligatory (fard kifāyah) for the community",
+        "explanation": "Following the same fard-kifāyah logic applied to medicine, scholars generally treat engineering and the natural sciences as recommended study, becoming a communal obligation wherever a community depends on outside expertise for essential infrastructure, energy, water, or construction that it could otherwise provide for itself."
+      },
+      "practice": {
+        "tier": "mustahab",
+        "tier_label": "Recommended — ruling shifts with application",
+        "explanation": "Designing and building beneficial infrastructure carries the same ruling as studying it. As with any neutral technical skill, the ruling shifts toward forbidden only where the specific application is itself harmful or unjust (e.g. engineering work whose clear purpose is indiscriminate harm) — the discipline itself is not the issue."
+      },
+      "quran": [
+        {
+          "ref": "Al-Mulk 67:15",
+          "quote": "made the earth subservient to you",
+          "note": "Cited as a basis for humanity's responsible use of the earth's resources."
+        },
+        {
+          "ref": "Al-Jāthiyah 45:13",
+          "quote": "subjected to you whatever is in the heavens and whatever is on the earth",
+          "note": "A frequently cited verse on humanity's stewardship over creation."
+        }
+      ],
+      "hadith": [],
+      "principle": "Same fard-kifāyah and 'beneficial knowledge' reasoning applied to medicine; classical scholars likewise praised the development of architecture, irrigation, and applied sciences within early Islamic civilisation as a continuation of this stewardship.",
+      "fatwa_sources": [
+        {
+          "name": "Is studying philosophy and psychology permissible? (general principle on beneficial sciences)",
+          "url": "https://islam.ca/is-studying-philosophy-and-psychology-permissible-in-islam/",
+          "position": "Lays out the general conditional-permissibility framework contemporary scholars apply to studying any worldly discipline."
+        }
+      ]
+    },
+    {
+      "id": "technology-tool",
+      "title": "Technology as a Neutral Tool",
+      "programs": [
+        "computer-science",
+        "artificial-intelligence",
+        "cybersecurity",
+        "data-science"
+      ],
+      "summary": "Classical Islamic legal theory holds that a neutral means or tool (wasīlah) takes the ruling of the purpose it serves — a knife is neutral whether used to cook or to harm. Contemporary scholars apply this same reasoning to computers, the internet, AI and data tools.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Permissible — increasingly Recommended",
+        "explanation": "Studying computing, AI, cybersecurity and data science is permissible by default, and increasingly treated as recommended given how central these skills now are to a community's economic and informational self-sufficiency — cybersecurity in particular is recognised as directly protective."
+      },
+      "practice": {
+        "tier": "mubah",
+        "tier_label": "Permissible by default — ruling follows the application",
+        "explanation": "Building or maintaining systems for lawful, beneficial purposes is permissible (and defensive cybersecurity work specifically leans recommended, since protecting people from harm is itself praiseworthy). Knowingly building tools whose primary purpose is unlawful — software built specifically to enable fraud, gambling platforms, or the distribution of indecent content — is forbidden, following the means-take-the-ruling-of-the-end principle, regardless of how technically impressive the work is."
+      },
+      "quran": [],
+      "hadith": [],
+      "principle": "Qā'idah fiqhiyyah (legal maxim): the means to a lawful end are themselves lawful, and the means to an unlawful end are themselves unlawful. Scholars derive this from the broader maxim that actions are judged by their underlying purpose (al-umūru bi-maqāṣidihā) and have applied it consistently to each new technology, from the printing press to the internet to AI.",
+      "fatwa_sources": [
+        {
+          "name": "Uncovering the Bedrock: A Primer on Islamic Legal Maxims",
+          "url": "https://yaqeeninstitute.org/read/paper/uncovering-the-bedrock-a-primer-on-islamic-legal-maxims",
+          "position": "Explains how classical legal maxims (including means/ends reasoning) are derived from the Qur'an and Sunnah and applied to new, unprecedented cases."
+        }
+      ]
+    },
+    {
+      "id": "trade-ethics",
+      "title": "Trade, Business Ethics & Economics",
+      "programs": [
+        "economics",
+        "business-management"
+      ],
+      "summary": "Trade is explicitly permitted and encouraged in the Qur'an, and the Prophet ﷺ was himself a merchant before prophethood. Honesty in business is given an unusually high spiritual rank in the Sunnah; dishonesty in business is correspondingly condemned.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Permissible — bordering Recommended",
+        "explanation": "Studying economics and business — including conventional/Western economic theory — is generally permissible for someone equipped to separate sound analytical tools from theoretical assumptions that rest on interest-based finance, following the same conditional-permissibility logic mainstream fatwa bodies apply to non-Islamic social-science disciplines generally."
+      },
+      "practice": {
+        "tier": "mustahab",
+        "tier_label": "Recommended, when conducted honestly",
+        "explanation": "Running an honest business or working in management is recommended — the famous hadith ranks the truthful, trustworthy merchant alongside the Prophets, the truthful, and the martyrs. Specific dishonest practices (cheating, hoarding to inflate prices, false advertising) remain forbidden regardless of the underlying field, and shift any role built around them to that ruling instead."
+      },
+      "quran": [
+        {
+          "ref": "Al-Baqarah 2:275",
+          "quote": "Allah has permitted trade",
+          "note": "The basic permission for commerce."
+        },
+        {
+          "ref": "Al-Jumu'ah 62:10",
+          "quote": "disperse within the land and seek from the bounty of Allah",
+          "note": "Encourages seeking lawful livelihood through trade after fulfilling religious obligations."
+        }
+      ],
+      "hadith": [
+        {
+          "ref": "Jāmi' at-Tirmidhī 1209",
+          "grade": "Sahih li ghayrihi (al-Albani)",
+          "paraphrase": "The truthful, trustworthy merchant will be with the Prophets, the truthful, and the martyrs."
+        },
+        {
+          "ref": "Sahih Muslim 102",
+          "grade": "Sahih",
+          "paraphrase": "Whoever cheats (in a sale) is not one of us."
+        }
+      ],
+      "principle": "Ijmā': trade and lawful business are agreed to be permissible and beneficial; the dividing line scholars draw is always specific dishonest conduct (cheating, hoarding, deception), never the act of trading or managing a business itself.",
+      "fatwa_sources": [
+        {
+          "name": "Hadith on trade: honest merchants with prophets, truthful, martyrs",
+          "url": "https://www.abuaminaelias.com/dailyhadithonline/2019/06/02/honest-traders-prophets-truthful/",
+          "position": "Collects and grades the core hadith on ethical trade."
+        }
+      ]
+    },
+    {
+      "id": "mathematics-knowledge",
+      "title": "Mathematics & the Knowledge of Calculation",
+      "programs": [
+        "mathematics-statistics"
+      ],
+      "summary": "Mathematics itself carries essentially no fiqh controversy. Classical Muslim scholarship made foundational advances in algebra, algorithms and astronomy in large part because of direct religious needs — calculating zakāt shares, inheritance divisions ('ilm al-mawārīth), prayer times, and the lunar calendar.",
+      "studying": {
+        "tier": "mustahab",
+        "tier_label": "Recommended",
+        "explanation": "Studying mathematics is recommended given its direct service to other beneficial sciences and to specific religious obligations that depend on precise calculation."
+      },
+      "practice": {
+        "tier": "mustahab",
+        "tier_label": "Recommended",
+        "explanation": "Working in mathematics, statistics or any of their applications carries the same recommended ruling — there is no distinguishing fiqh concern attached to the discipline itself; any concern would relate only to a specific downstream application (e.g. the finance-related roles covered under the Ribā theme)."
+      },
+      "quran": [],
+      "hadith": [],
+      "principle": "Historical/communal-benefit reasoning: classical jurists themselves required competence in arithmetic to correctly calculate inheritance shares and zakāt, and astronomers used mathematics to fix prayer times and the Islamic calendar — establishing mathematics as a long-standing religiously useful science.",
+      "fatwa_sources": []
+    },
+    {
+      "id": "law-justice",
+      "title": "Law, Justice & Governance",
+      "programs": [
+        "law",
+        "social-sciences"
+      ],
+      "summary": "Justice ('adl) is one of the most repeated ethical demands in the Qur'an. Studying and practising law under a non-Sharī'ah legal system is a genuinely nuanced area where the ruling depends heavily on intent and the specific role, not a single blanket answer.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Conditionally Permissible — depends on intent and grounding",
+        "explanation": "The Saudi Standing Committee for Issuing Fatwas holds that studying man-made law specifically in order to apply or enforce it where it contradicts Sharī'ah is not permissible by default. However, studying it to understand it, to expose its flaws, or to defend people's rights and interests (especially where no Sharī'ah court exists) is permissible — and can become obligatory for specific individuals tasked with that purpose. The same source cautions that someone without firm grounding in Qur'an and Sunnah risks confusion and should be more cautious."
+      },
+      "practice": {
+        "tier": "mubah",
+        "tier_label": "Permissible when seeking justice; contested where it conflicts with Sharī'ah",
+        "explanation": "Practising law to defend rights, seek redress for the wronged, or oppose oppression is widely supported. The genuinely contested area is the specific act of upholding, applying or legislating a ruling that directly contradicts a clear Sharī'ah principle — many scholars hold that act itself impermissible, while advocacy and defence work for clients is treated far more permissively."
+      },
+      "quran": [
+        {
+          "ref": "An-Nisā 4:58",
+          "quote": "judge between people in justice",
+          "note": "A direct command regarding judging fairly."
+        },
+        {
+          "ref": "Al-Mā'idah 5:8",
+          "quote": "stand out firmly for justice",
+          "note": "A repeated Qur'anic demand for justice even against one's own interest."
+        }
+      ],
+      "hadith": [],
+      "principle": "Conditional permissibility based on intent (niyyah) and the individual's capacity to distinguish sound from unsound — the same framework mainstream fatwa bodies apply to studying philosophy and other non-Islamic social-science disciplines.",
+      "scholarly_note": "This is a real area of nuance rather than settled consensus; scholars differ on exactly where 'studying to understand/defend rights' ends and 'studying to apply contrary rulings' begins, especially for lawyers practising in mixed common-law/civil-law jurisdictions like Pakistan or the UK.",
+      "fatwa_sources": [
+        {
+          "name": "Ruling on studying psychology and law",
+          "url": "https://islamqa.info/en/answers/99983",
+          "position": "The Standing Committee for Issuing Fatwas' detailed, conditional answer on studying man-made law."
+        }
+      ]
+    },
+    {
+      "id": "psychology-soul",
+      "title": "Psychology & the Study of the Human Mind",
+      "programs": [
+        "psychology"
+      ],
+      "summary": "A genuinely debated area among contemporary scholars. There is broad agreement that mental-health knowledge is needed and beneficial; the debate is over whether specific secular psychological theories rest on materialist or anti-religious premises that a student must be equipped to filter out.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Conditionally Permissible — real scholarly difference",
+        "explanation": "The Saudi Standing Committee for Issuing Fatwas takes the most cautious position: permissible only for those grounded enough in Qur'an and Sunnah to distinguish sound from unsound theory, otherwise discouraged. Other contemporary scholars (cited via IslamWeb, and the general principle from Shaykh Ibn al-'Uthaymīn that any beneficial, non-contradictory science may even be required if it benefits Muslims) hold that studying psychology is straightforwardly permissible and increasingly necessary given real mental-health needs in Muslim communities."
+      },
+      "practice": {
+        "tier": "mubah",
+        "tier_label": "Permissible, leaning Recommended",
+        "explanation": "Practising as a psychologist or counsellor helping real people is widely supported — there is nothing objectionable in seeing or being a trustworthy, skilled mental-health professional, as long as the practitioner does not present secular theory as though it overrides revealed guidance on the nature of the soul."
+      },
+      "quran": [],
+      "hadith": [],
+      "principle": "Conditional permissibility based on the student's grounding and intent, paralleling the ruling on studying law.",
+      "scholarly_note": "This is one of the clearest examples in this dataset of genuine, current scholarly disagreement rather than near-consensus — readers should weigh both positions rather than treat either as final.",
+      "fatwa_sources": [
+        {
+          "name": "Ruling on studying psychology and law",
+          "url": "https://islamqa.info/en/answers/99983",
+          "position": "The more cautious, conditional position."
+        },
+        {
+          "name": "Studying psychology is permissible",
+          "url": "https://islamweb.net/en/fatwa/382180/studying-psychology-is-permissible",
+          "position": "The more permissive position, treating psychology as a generally useful science."
+        },
+        {
+          "name": "Should a Muslim consult a psychologist or psychiatrist?",
+          "url": "https://islamqa.info/en/answers/380763",
+          "position": "Clarifies there is no issue with the practice of psychology itself, distinct from concerns about specific university curricula."
+        }
+      ]
+    },
+    {
+      "id": "media-truth",
+      "title": "Media, Journalism & Truthful Speech",
+      "programs": [
+        "media-journalism"
+      ],
+      "summary": "Truthful, verified speech is a major recurring Qur'anic theme. Journalism and media work are judged heavily by content and accuracy rather than by the profession itself.",
+      "studying": {
+        "tier": "mubah",
+        "tier_label": "Permissible — Recommended when oriented toward truthful reporting",
+        "explanation": "Studying journalism, media and communication is permissible, and recommended when the explicit goal is accurate, responsible reporting that serves the public."
+      },
+      "practice": {
+        "tier": "mustahab",
+        "tier_label": "Recommended when truthful — Forbidden when knowingly false or indecent",
+        "explanation": "Reporting and verifying news responsibly is recommended; knowingly spreading falsehood, unverified rumours, slander, or indecent content is forbidden — the ruling tracks the content and conduct, not the profession."
+      },
+      "quran": [
+        {
+          "ref": "Al-Hujurāt 49:6",
+          "quote": "if a disobedient one brings you information, investigate",
+          "note": "Commands verification before acting on or spreading a report."
+        },
+        {
+          "ref": "Al-Isrā 17:36",
+          "quote": "do not pursue that of which you have no knowledge",
+          "note": "A general command against speaking or acting without verified knowledge."
+        }
+      ],
+      "hadith": [
+        {
+          "ref": "referenced in the introduction to Sahih Muslim",
+          "grade": "—",
+          "paraphrase": "It is enough of a lie for a person to narrate everything he has heard without verifying it."
+        }
+      ],
+      "principle": "Same means-take-the-ruling-of-the-end logic as the technology theme: the platform (writing, broadcasting, publishing) is neutral; the content carried on it is what is judged.",
+      "fatwa_sources": [
+        {
+          "name": "A Divine Call for Accountability in an Age of Misinformation",
+          "url": "https://en.islamonweb.net/A-Divine-Call-for-Accountability-in-an-Age-of-Misinformation",
+          "position": "Connects 49:6 and 17:36 directly to the modern duty to verify before sharing information."
+        }
+      ]
+    },
+    {
+      "id": "language-learning",
+      "title": "Language Learning & Understanding Others",
+      "programs": [
+        "languages-linguistics"
+      ],
+      "summary": "The Prophet ﷺ personally commissioned a companion to learn foreign languages for practical, diplomatic purposes — a direct precedent scholars cite when discussing language study today.",
+      "studying": {
+        "tier": "mustahab",
+        "tier_label": "Recommended",
+        "explanation": "Learning languages is recommended, following the explicit precedent of the Prophet ﷺ instructing Zayd ibn Thābit to learn Hebrew and Syriac so he could read and answer the community's correspondence — and the wider Qur'anic theme of linguistic and cultural diversity as something to be understood rather than ignored."
+      },
+      "practice": {
+        "tier": "mustahab",
+        "tier_label": "Recommended",
+        "explanation": "Working as a translator, interpreter, language teacher or in language-dependent diplomacy and media carries the same recommended ruling, given its direct service to communication, understanding between peoples, and — historically — da'wah."
+      },
+      "quran": [
+        {
+          "ref": "Al-Hujurāt 49:13",
+          "quote": "made you peoples and tribes that you may know one another",
+          "note": "Frames human and linguistic diversity as something to be understood, not avoided."
+        }
+      ],
+      "hadith": [
+        {
+          "ref": "Jāmi' at-Tirmidhī, Bāb al-Isti'dhān: 22 / Sunan Abī Dāwūd, Kitāb al-'Ilm: 2",
+          "grade": "reported across multiple early sources, including Musnad Aḥmad",
+          "paraphrase": "The Prophet ﷺ ordered Zayd ibn Thābit to learn the writing of the Jews so he could read and write the community's correspondence."
+        }
+      ],
+      "principle": "Direct precedent (Sunnah): the Prophet ﷺ himself assigned a companion to acquire a specific language skill for a clear communal benefit, which scholars treat as establishing the recommended status of language learning generally.",
+      "fatwa_sources": []
+    }
+  ]
+}

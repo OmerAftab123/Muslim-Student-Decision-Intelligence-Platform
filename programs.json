@@ -1,0 +1,1192 @@
+{
+  "programs": [
+    {
+      "id": "medicine",
+      "name": "Medicine (MBBS/MD)",
+      "category": "Health Sciences",
+      "description": "Five-to-six-year clinical degree training doctors, almost universally requiring Chemistry and Biology plus an admissions test and interview.",
+      "required": [
+        "Chemistry",
+        "Biology"
+      ],
+      "preferred": [
+        "Mathematics",
+        "Physics"
+      ],
+      "recommended": [
+        "Psychology"
+      ],
+      "grade_band": "Top tier — typically A*AA/AAA (UK) or 90%+ aggregate, plus UCAT/BMAT/MCAT and interview",
+      "careers": [
+        {
+          "title": "Hospital Doctor / Physician",
+          "note": "Core clinical practice across specialties after postgraduate training."
+        },
+        {
+          "title": "Surgeon",
+          "note": "Requires further specialist surgical training after the base degree."
+        },
+        {
+          "title": "General Practitioner",
+          "note": "Community-based primary care after GP specialty training."
+        },
+        {
+          "title": "Medical Researcher",
+          "note": "Clinical or lab-based research, often combined with practice."
+        },
+        {
+          "title": "Public Health Physician",
+          "note": "Population-level health policy and epidemiology roles."
+        }
+      ],
+      "employers": [
+        "National health services (NHS, etc.)",
+        "Private hospitals",
+        "Research institutes",
+        "Pharmaceutical companies"
+      ],
+      "outlook": "Consistently high global demand; one of the most oversubscribed and competitive routes everywhere it is offered.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Pre-med foundation years, biomedical science as a stepping stone, or graduate-entry medicine after a first degree."
+    },
+    {
+      "id": "dentistry",
+      "name": "Dentistry (BDS)",
+      "category": "Health Sciences",
+      "description": "Clinical degree training dentists, with subject demands very close to Medicine.",
+      "required": [
+        "Chemistry",
+        "Biology"
+      ],
+      "preferred": [
+        "Mathematics",
+        "Physics"
+      ],
+      "recommended": [],
+      "grade_band": "Top tier — typically A*AA/AAA plus UCAT/DAT and interview",
+      "careers": [
+        {
+          "title": "General Dentist",
+          "note": "Primary dental care in practice or hospital settings."
+        },
+        {
+          "title": "Orthodontist",
+          "note": "Specialist tooth/jaw alignment practice after further training."
+        },
+        {
+          "title": "Oral & Maxillofacial Surgeon",
+          "note": "Combined dental and medical surgical specialty."
+        },
+        {
+          "title": "Dental Public Health Officer",
+          "note": "Population-level oral health policy."
+        }
+      ],
+      "employers": [
+        "Private dental practices",
+        "National health services",
+        "Hospitals",
+        "Dental product companies"
+      ],
+      "outlook": "Stable, steady global demand; private practice ownership is a common long-term career path.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Biomedical or dental-hygiene routes as alternative entry if direct admission is not achieved."
+    },
+    {
+      "id": "veterinary-science",
+      "name": "Veterinary Science (BVSc/DVM)",
+      "category": "Health Sciences",
+      "description": "Clinical degree training vets to treat animals, requiring strong biology and chemistry plus extensive animal-handling work experience.",
+      "required": [
+        "Chemistry",
+        "Biology"
+      ],
+      "preferred": [
+        "Mathematics",
+        "Physics"
+      ],
+      "recommended": [],
+      "grade_band": "Top tier — typically A*AA/AAA plus substantial documented animal/work experience",
+      "careers": [
+        {
+          "title": "Veterinarian (companion animal)",
+          "note": "General small-animal practice."
+        },
+        {
+          "title": "Veterinarian (large animal/equine)",
+          "note": "Farm or equine-focused practice."
+        },
+        {
+          "title": "Veterinary Researcher",
+          "note": "Animal health and pharmaceutical research."
+        },
+        {
+          "title": "Wildlife/Conservation Vet",
+          "note": "Zoo, wildlife and conservation-focused practice."
+        }
+      ],
+      "employers": [
+        "Veterinary practices",
+        "Zoos and wildlife parks",
+        "Agricultural and pharma companies",
+        "Government animal-health agencies"
+      ],
+      "outlook": "Strong, steady demand; relatively few training places worldwide keeps competition high.",
+      "countries": [
+        "UK",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Animal science or biology degrees as a stepping stone toward graduate-entry veterinary programmes."
+    },
+    {
+      "id": "pharmacy",
+      "name": "Pharmacy (BPharm/PharmD)",
+      "category": "Health Sciences",
+      "description": "Degree training pharmacists in drug science, dispensing and patient care.",
+      "required": [
+        "Chemistry"
+      ],
+      "preferred": [
+        "Biology",
+        "Mathematics"
+      ],
+      "recommended": [
+        "Physics"
+      ],
+      "grade_band": "Competitive — typically AAA/AAB or 85%+ aggregate",
+      "careers": [
+        {
+          "title": "Community Pharmacist",
+          "note": "Retail/community pharmacy dispensing and patient advice."
+        },
+        {
+          "title": "Hospital Pharmacist",
+          "note": "Clinical pharmacy within hospital teams."
+        },
+        {
+          "title": "Industrial/Pharma Scientist",
+          "note": "Drug development and regulatory roles."
+        },
+        {
+          "title": "Clinical Research Associate",
+          "note": "Running and monitoring drug trials."
+        }
+      ],
+      "employers": [
+        "Pharmacy chains",
+        "Hospitals",
+        "Pharmaceutical manufacturers",
+        "Regulatory agencies"
+      ],
+      "outlook": "Stable demand worldwide; pharma R&D roles growing faster than retail pharmacy in most markets.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Biomedical/chemistry degrees can lead into pharma roles without the clinical pharmacist license."
+    },
+    {
+      "id": "nursing",
+      "name": "Nursing",
+      "category": "Health Sciences",
+      "description": "Clinical degree training registered nurses across adult, paediatric, mental-health or community specialisms.",
+      "required": [
+        "Biology"
+      ],
+      "preferred": [
+        "Chemistry",
+        "Health and Social Care"
+      ],
+      "recommended": [
+        "Psychology"
+      ],
+      "grade_band": "Standard-to-competitive — typically BBB-AAB or 70-80%+ aggregate",
+      "careers": [
+        {
+          "title": "Registered Nurse",
+          "note": "Hospital or community clinical care."
+        },
+        {
+          "title": "Specialist/Advanced Nurse Practitioner",
+          "note": "Extended clinical role after further training."
+        },
+        {
+          "title": "Nurse Educator",
+          "note": "Training the next generation of nurses."
+        },
+        {
+          "title": "Healthcare Manager",
+          "note": "Operational leadership within health services."
+        }
+      ],
+      "employers": [
+        "National health services",
+        "Private hospitals",
+        "Care homes",
+        "Community health organisations"
+      ],
+      "outlook": "Persistently high global demand and recognised skills shortages in many countries.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Healthcare assistant routes or nursing associate programmes can lead into registered nursing later."
+    },
+    {
+      "id": "computer-science",
+      "name": "Computer Science / Software Engineering",
+      "category": "Computing & Technology",
+      "description": "Covers software development, systems, theory of computation and (at many universities) specialisms in AI, cybersecurity and data — Mathematics is the universal gatekeeper subject.",
+      "required": [
+        "Mathematics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Computer Science",
+        "Physics"
+      ],
+      "recommended": [
+        "Statistics"
+      ],
+      "grade_band": "Competitive-to-top tier — typically A*AA-AAB or 80%+ aggregate, A* in Maths at the most selective schools",
+      "careers": [
+        {
+          "title": "Software Engineer",
+          "note": "Building and maintaining applications and systems."
+        },
+        {
+          "title": "AI/Machine Learning Engineer",
+          "note": "Designing and deploying ML models."
+        },
+        {
+          "title": "Cybersecurity Analyst",
+          "note": "Protecting systems and data from attack."
+        },
+        {
+          "title": "Game Developer",
+          "note": "Programming and engine work for interactive entertainment."
+        },
+        {
+          "title": "Cloud/DevOps Engineer",
+          "note": "Building and operating cloud infrastructure."
+        }
+      ],
+      "employers": [
+        "Big Tech firms",
+        "Banks and fintechs",
+        "Startups",
+        "Government & defence agencies",
+        "Consultancies"
+      ],
+      "outlook": "Among the strongest-demand fields globally, especially AI, cybersecurity and cloud specialisms.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Bootcamps and self-taught portfolios are increasingly accepted alongside or instead of a CS degree in industry hiring."
+    },
+    {
+      "id": "artificial-intelligence",
+      "name": "Artificial Intelligence / Machine Learning",
+      "category": "Computing & Technology",
+      "description": "A specialised computing degree focused on machine learning, statistics and intelligent systems, usually sharing a first year with Computer Science.",
+      "required": [
+        "Mathematics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Computer Science"
+      ],
+      "recommended": [
+        "Statistics",
+        "Physics"
+      ],
+      "grade_band": "Top tier — typically A*AA, heavy Maths weighting",
+      "careers": [
+        {
+          "title": "Machine Learning Engineer",
+          "note": "Building and productionising ML models."
+        },
+        {
+          "title": "AI Research Scientist",
+          "note": "Advancing the state of the art, often with a postgraduate degree."
+        },
+        {
+          "title": "Data Scientist",
+          "note": "Applying statistical/ML methods to business problems."
+        },
+        {
+          "title": "Robotics Engineer",
+          "note": "Applying AI to physical/autonomous systems."
+        }
+      ],
+      "employers": [
+        "AI labs",
+        "Big Tech firms",
+        "Research institutes",
+        "Autonomous-vehicle companies"
+      ],
+      "outlook": "Fastest-growing specialism within computing; demand currently outstrips supply of qualified graduates.",
+      "countries": [
+        "UK",
+        "US",
+        "Canada",
+        "UAE"
+      ],
+      "alt_pathways": "Many AI specialists enter via a general Computer Science or Maths degree followed by a Master's."
+    },
+    {
+      "id": "cybersecurity",
+      "name": "Cybersecurity",
+      "category": "Computing & Technology",
+      "description": "Specialist computing degree focused on securing systems, networks and data against attack.",
+      "required": [
+        "Mathematics"
+      ],
+      "preferred": [
+        "Computer Science"
+      ],
+      "recommended": [
+        "Further Mathematics"
+      ],
+      "grade_band": "Competitive — typically AAB-ABB or 75%+ aggregate",
+      "careers": [
+        {
+          "title": "Security Analyst / SOC Analyst",
+          "note": "Monitoring and responding to security threats."
+        },
+        {
+          "title": "Penetration Tester",
+          "note": "Ethically testing systems for vulnerabilities."
+        },
+        {
+          "title": "Security Architect",
+          "note": "Designing secure systems and infrastructure."
+        },
+        {
+          "title": "Digital Forensics Investigator",
+          "note": "Investigating cybercrime and data breaches."
+        }
+      ],
+      "employers": [
+        "Banks",
+        "Government & defence",
+        "Consultancies",
+        "Big Tech firms"
+      ],
+      "outlook": "Acute, well-documented global skills shortage; strong salaries and job security.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "UAE"
+      ],
+      "alt_pathways": "Industry certifications (e.g. CompTIA Security+, CEH) are widely recognised alongside or instead of a degree."
+    },
+    {
+      "id": "data-science",
+      "name": "Data Science / Business Analytics",
+      "category": "Computing & Technology",
+      "description": "Blends statistics, programming and domain knowledge to extract insight from data — a strong fit for a Maths + Economics + Computer Science profile.",
+      "required": [
+        "Mathematics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Computer Science",
+        "Economics",
+        "Statistics"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive-to-top tier — typically A*AA with Further Maths, or A*A*A* in Maths alone without it",
+      "careers": [
+        {
+          "title": "Data Scientist",
+          "note": "Statistical modelling and machine learning on business data."
+        },
+        {
+          "title": "Data Analyst",
+          "note": "Reporting, dashboards and descriptive analytics."
+        },
+        {
+          "title": "Business Intelligence Developer",
+          "note": "Building data pipelines and BI tools."
+        },
+        {
+          "title": "Marketing/Risk Analyst",
+          "note": "Applying analytics within a specific business function."
+        }
+      ],
+      "employers": [
+        "Banks and fintechs",
+        "Retail and e-commerce",
+        "Consultancies",
+        "Tech companies"
+      ],
+      "outlook": "One of the fastest-growing analytical career tracks globally across almost every industry.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US"
+      ],
+      "alt_pathways": "Economics, Maths or CS graduates frequently move into data science via short courses or on-the-job training."
+    },
+    {
+      "id": "electrical-electronic-engineering",
+      "name": "Electrical & Electronic Engineering",
+      "category": "Engineering",
+      "description": "Covers power systems, electronics, telecommunications and embedded systems — Physics and Maths are the standard gatekeeper combination.",
+      "required": [
+        "Mathematics",
+        "Physics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Electronics"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive-to-top tier — typically A*AA-AAA",
+      "careers": [
+        {
+          "title": "Electrical Engineer",
+          "note": "Power systems, grids and electrical infrastructure."
+        },
+        {
+          "title": "Electronics/Embedded Systems Engineer",
+          "note": "Designing circuits and embedded hardware."
+        },
+        {
+          "title": "Telecommunications Engineer",
+          "note": "Networks, signal processing and connectivity."
+        },
+        {
+          "title": "Control Systems Engineer",
+          "note": "Automation and industrial control."
+        }
+      ],
+      "employers": [
+        "Energy and utility companies",
+        "Telecoms operators",
+        "Defence contractors",
+        "Manufacturing firms"
+      ],
+      "outlook": "Steady demand, with strong growth in renewable energy and electrification of transport.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Technician/apprenticeship routes can lead to chartered engineer status via further study."
+    },
+    {
+      "id": "mechanical-engineering",
+      "name": "Mechanical Engineering",
+      "category": "Engineering",
+      "description": "Covers mechanics, thermodynamics, materials and design — broadly applicable across automotive, aerospace and manufacturing.",
+      "required": [
+        "Mathematics",
+        "Physics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Design and Technology"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive — typically AAA-ABB",
+      "careers": [
+        {
+          "title": "Mechanical Engineer",
+          "note": "Design and analysis of mechanical systems."
+        },
+        {
+          "title": "Automotive Engineer",
+          "note": "Vehicle design, testing and manufacturing."
+        },
+        {
+          "title": "Aerospace Engineer",
+          "note": "Aircraft and spacecraft systems design."
+        },
+        {
+          "title": "Manufacturing/Process Engineer",
+          "note": "Production-line design and optimisation."
+        }
+      ],
+      "employers": [
+        "Automotive and aerospace manufacturers",
+        "Energy companies",
+        "Defence contractors",
+        "Consultancies"
+      ],
+      "outlook": "Consistently strong demand; a foundational engineering discipline across almost every industry.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Apprenticeship and technician routes through professional engineering institutions."
+    },
+    {
+      "id": "civil-engineering",
+      "name": "Civil Engineering",
+      "category": "Engineering",
+      "description": "Covers structures, infrastructure, transport and construction — pairs well with Maths, Physics and Built Environment.",
+      "required": [
+        "Mathematics",
+        "Physics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Built Environment"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive — typically AAA-BBB",
+      "careers": [
+        {
+          "title": "Structural Engineer",
+          "note": "Designing buildings and structures."
+        },
+        {
+          "title": "Transport/Highways Engineer",
+          "note": "Roads, rail and transport infrastructure."
+        },
+        {
+          "title": "Water/Environmental Engineer",
+          "note": "Water supply, drainage and flood systems."
+        },
+        {
+          "title": "Construction Project Manager",
+          "note": "Delivering infrastructure projects on time and budget."
+        }
+      ],
+      "employers": [
+        "Construction firms",
+        "Government infrastructure agencies",
+        "Engineering consultancies",
+        "Utility companies"
+      ],
+      "outlook": "Steady, infrastructure-driven demand, particularly strong in rapidly urbanising countries.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Quantity surveying or construction-management degrees as related, slightly less technical alternatives."
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture",
+      "category": "Engineering",
+      "description": "Design-led professional degree combining creative, technical and regulatory training; usually a 5-7 year qualifying route.",
+      "required": [],
+      "preferred": [
+        "Art and Design",
+        "Mathematics",
+        "Design and Technology",
+        "Physics"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive — typically AAB-ABB plus a creative portfolio",
+      "careers": [
+        {
+          "title": "Architect",
+          "note": "Building design, after completing the full professional qualifying route."
+        },
+        {
+          "title": "Architectural Technologist",
+          "note": "Technical detailing and construction documentation."
+        },
+        {
+          "title": "Urban Designer",
+          "note": "Masterplanning and city-scale design."
+        },
+        {
+          "title": "Interior Architect",
+          "note": "Internal space design within buildings."
+        }
+      ],
+      "employers": [
+        "Architecture practices",
+        "Construction firms",
+        "Government planning departments",
+        "Real-estate developers"
+      ],
+      "outlook": "Cyclical with construction markets, but a stable long-term professional career path.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Architectural technology degrees offer a shorter, more technical alternative route."
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "category": "Business & Social Science",
+      "description": "Analyses how individuals, firms, and governments allocate resources — a strong, direct continuation of an Economics A-Level.",
+      "required": [],
+      "preferred": [
+        "Mathematics",
+        "Economics"
+      ],
+      "recommended": [
+        "Further Mathematics",
+        "Statistics"
+      ],
+      "grade_band": "Competitive-to-top tier — typically A*AA-AAB or 80%+ aggregate",
+      "careers": [
+        {
+          "title": "Economist",
+          "note": "Government, central bank or think-tank economic analysis."
+        },
+        {
+          "title": "Policy Advisor",
+          "note": "Advising on public-policy decisions."
+        },
+        {
+          "title": "Investment Banker / Analyst",
+          "note": "Financial markets and corporate finance roles."
+        },
+        {
+          "title": "Management Consultant",
+          "note": "Strategy and economics-driven business advisory."
+        }
+      ],
+      "employers": [
+        "Central banks",
+        "Government departments",
+        "Investment banks",
+        "Consultancies"
+      ],
+      "outlook": "Strong, stable demand; a widely respected, flexible degree for finance, policy and business careers alike.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Joint degrees (Economics & Maths, Economics & CS) widen options without needing a separate subject."
+    },
+    {
+      "id": "business-management",
+      "name": "Business & Management",
+      "category": "Business & Social Science",
+      "description": "Broad business foundation covering strategy, operations, marketing and organisational behaviour.",
+      "required": [],
+      "preferred": [
+        "Business",
+        "Economics",
+        "Mathematics"
+      ],
+      "recommended": [],
+      "grade_band": "Standard-to-competitive — typically ABB-BBB or 70%+ aggregate",
+      "careers": [
+        {
+          "title": "Management Consultant",
+          "note": "Cross-industry strategy and operations advisory."
+        },
+        {
+          "title": "Marketing Manager",
+          "note": "Brand and campaign strategy."
+        },
+        {
+          "title": "Operations Manager",
+          "note": "Running day-to-day business functions."
+        },
+        {
+          "title": "Entrepreneur",
+          "note": "Founding and running a business."
+        }
+      ],
+      "employers": [
+        "Multinational corporates",
+        "Consultancies",
+        "Startups",
+        "Retail and FMCG firms"
+      ],
+      "outlook": "Broad, stable demand across virtually every industry worldwide.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Specialised variants (marketing, HR, supply chain) are common alternative entry points."
+    },
+    {
+      "id": "accounting-finance",
+      "name": "Accounting & Finance",
+      "category": "Business & Social Science",
+      "description": "Covers financial reporting, corporate finance and investment analysis — a direct continuation of an Accounting A-Level.",
+      "required": [],
+      "preferred": [
+        "Accounting",
+        "Mathematics",
+        "Economics"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive — typically A*AA-AAB or 75%+ aggregate",
+      "careers": [
+        {
+          "title": "Chartered Accountant",
+          "note": "Audit, tax or financial reporting after professional qualification (ACA/ACCA/CA)."
+        },
+        {
+          "title": "Financial Analyst",
+          "note": "Corporate or investment financial analysis."
+        },
+        {
+          "title": "Investment Banker",
+          "note": "Capital markets and corporate finance deals."
+        },
+        {
+          "title": "Corporate Treasurer",
+          "note": "Managing a company's cash, risk and funding."
+        }
+      ],
+      "employers": [
+        "Big Four accounting firms",
+        "Investment banks",
+        "Corporates",
+        "Government audit bodies"
+      ],
+      "outlook": "Consistently strong, globally portable demand; professional qualification (ACCA/ACA/CPA) significantly boosts prospects.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia",
+        "UAE"
+      ],
+      "alt_pathways": "Professional accounting qualifications (ACCA, CIMA) can be studied alongside or instead of a full degree."
+    },
+    {
+      "id": "actuarial-science",
+      "name": "Actuarial Science",
+      "category": "Business & Social Science",
+      "description": "Applies maths, statistics and economics to assess financial risk, especially in insurance and pensions.",
+      "required": [
+        "Mathematics"
+      ],
+      "preferred": [
+        "Further Mathematics",
+        "Statistics",
+        "Economics"
+      ],
+      "recommended": [],
+      "grade_band": "Top tier — typically A*AA-AAA, near-universal requirement for an A in Maths",
+      "careers": [
+        {
+          "title": "Actuary",
+          "note": "Pricing and risk assessment for insurance/pensions, via professional exams post-degree."
+        },
+        {
+          "title": "Risk Analyst",
+          "note": "Quantitative risk management in banking or insurance."
+        },
+        {
+          "title": "Pensions Consultant",
+          "note": "Advising on pension scheme design and funding."
+        },
+        {
+          "title": "Catastrophe Modeller",
+          "note": "Quantifying risk from natural disasters for (re)insurers."
+        }
+      ],
+      "employers": [
+        "Insurance companies",
+        "Reinsurers",
+        "Pension consultancies",
+        "Investment banks"
+      ],
+      "outlook": "Consistently ranked among the highest-paying, most stable quantitative careers globally.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Maths or Statistics graduates can qualify as actuaries by passing professional body exams (IFoA, SOA) after a related degree."
+    },
+    {
+      "id": "mathematics-statistics",
+      "name": "Mathematics & Statistics",
+      "category": "Mathematics & Computing",
+      "description": "Pure and applied mathematics, statistics and (at many universities) financial or computational mathematics.",
+      "required": [
+        "Mathematics"
+      ],
+      "preferred": [
+        "Further Mathematics"
+      ],
+      "recommended": [
+        "Physics",
+        "Computer Science"
+      ],
+      "grade_band": "Top tier at elite departments (Further Maths often the stated minimum, e.g. Cambridge); A*AA-AAB elsewhere",
+      "careers": [
+        {
+          "title": "Research Mathematician / Academic",
+          "note": "University research and teaching, post-PhD."
+        },
+        {
+          "title": "Quantitative Analyst (\"Quant\")",
+          "note": "Mathematical modelling in finance and trading."
+        },
+        {
+          "title": "Data Scientist",
+          "note": "Statistical and machine-learning roles across industry."
+        },
+        {
+          "title": "Cryptographer",
+          "note": "Security and encryption-focused mathematics roles."
+        }
+      ],
+      "employers": [
+        "Universities and research institutes",
+        "Investment banks and hedge funds",
+        "Tech companies",
+        "Government (e.g. GCHQ-type agencies)"
+      ],
+      "outlook": "Extremely flexible degree; consistently strong demand across finance, tech and research.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Joint Maths degrees (Maths & Economics, Maths & CS) broaden career options further."
+    },
+    {
+      "id": "law",
+      "name": "Law (LLB/JD)",
+      "category": "Humanities & Social Science",
+      "description": "Foundational legal training; in the UK/Pakistan an undergraduate LLB, in the US a postgraduate JD after any first degree.",
+      "required": [],
+      "preferred": [
+        "English Literature",
+        "History",
+        "Politics",
+        "Philosophy"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive-to-top tier — typically A*AA-AAB or 80%+ aggregate",
+      "careers": [
+        {
+          "title": "Solicitor / Advocate",
+          "note": "Client-facing legal practice after further professional training."
+        },
+        {
+          "title": "Barrister",
+          "note": "Courtroom advocacy specialism (UK-style systems)."
+        },
+        {
+          "title": "Corporate/In-house Counsel",
+          "note": "Legal advisory within a company."
+        },
+        {
+          "title": "Judge",
+          "note": "Senior judiciary role, typically after years of practice."
+        }
+      ],
+      "employers": [
+        "Law firms",
+        "Corporates (in-house legal)",
+        "Government legal departments",
+        "Courts and judiciary"
+      ],
+      "outlook": "Stable, prestige-linked demand; corporate and commercial law specialisms currently strongest.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Graduate-entry law (GDL/JD-style) lets non-law graduates qualify after a different first degree."
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "category": "Humanities & Social Science",
+      "description": "Scientific study of mind and behaviour; a flexible degree feeding into clinical, organisational and research careers.",
+      "required": [],
+      "preferred": [
+        "Biology",
+        "Psychology",
+        "Mathematics"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive — typically AAB-ABB or 75%+ aggregate",
+      "careers": [
+        {
+          "title": "Clinical Psychologist",
+          "note": "Requires further postgraduate clinical training."
+        },
+        {
+          "title": "HR / Organisational Psychologist",
+          "note": "Workplace behaviour and HR strategy."
+        },
+        {
+          "title": "UX Researcher",
+          "note": "User-behaviour research in tech product teams."
+        },
+        {
+          "title": "Counsellor / Therapist",
+          "note": "Requires further specialist therapy training."
+        }
+      ],
+      "employers": [
+        "Healthcare and mental-health services",
+        "Tech companies (UX research)",
+        "HR consultancies",
+        "Universities and research bodies"
+      ],
+      "outlook": "Growing demand, especially in mental-health services and UX/behavioural-research roles in tech.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Many psychology graduates move into HR, marketing or UX without further clinical training."
+    },
+    {
+      "id": "natural-sciences",
+      "name": "Natural Sciences (Biology / Chemistry / Physics)",
+      "category": "Sciences",
+      "description": "Single or combined physical/life-science degrees feeding into research, industry and further professional study.",
+      "required": [],
+      "preferred": [
+        "Biology",
+        "Chemistry",
+        "Physics",
+        "Mathematics"
+      ],
+      "recommended": [],
+      "grade_band": "Competitive — typically AAA-ABB depending on the specific science",
+      "careers": [
+        {
+          "title": "Research Scientist",
+          "note": "Academic or industrial R&D, often requiring a postgraduate degree."
+        },
+        {
+          "title": "Lab/Quality Analyst",
+          "note": "Applied testing and quality-control roles in industry."
+        },
+        {
+          "title": "Science Teacher",
+          "note": "Secondary or college-level science education."
+        },
+        {
+          "title": "Science Communicator/Writer",
+          "note": "Translating science for media and the public."
+        }
+      ],
+      "employers": [
+        "Universities and research institutes",
+        "Pharmaceutical and chemical companies",
+        "Government science agencies",
+        "Schools and colleges"
+      ],
+      "outlook": "Stable; R&D-heavy industries (pharma, biotech, materials) show the strongest long-term growth.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "A general science degree keeps medicine, engineering and teaching routes open via further study."
+    },
+    {
+      "id": "media-journalism",
+      "name": "Media, Journalism & Communication",
+      "category": "Arts & Humanities",
+      "description": "Covers reporting, broadcasting, PR and digital content — a natural fit for English, Urdu, Media Studies or Journalism A-Levels.",
+      "required": [],
+      "preferred": [
+        "English Language",
+        "Journalism",
+        "Media Studies",
+        "Urdu"
+      ],
+      "recommended": [],
+      "grade_band": "Standard-to-competitive — typically ABB-BBB or 65-75% aggregate",
+      "careers": [
+        {
+          "title": "Journalist / Reporter",
+          "note": "Print, broadcast or digital news reporting."
+        },
+        {
+          "title": "Broadcaster / Presenter",
+          "note": "On-air or on-camera media roles."
+        },
+        {
+          "title": "PR / Communications Officer",
+          "note": "Managing organisational reputation and messaging."
+        },
+        {
+          "title": "Content Creator / Strategist",
+          "note": "Digital content for brands and platforms."
+        }
+      ],
+      "employers": [
+        "News organisations",
+        "Broadcasters",
+        "PR and communications agencies",
+        "Corporate communications departments"
+      ],
+      "outlook": "Traditional journalism roles are shrinking, but digital content, PR and communications roles are growing.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Portfolio-building (blogging, podcasting, video) is increasingly as valued by employers as the degree itself."
+    },
+    {
+      "id": "languages-linguistics",
+      "name": "Languages, Linguistics & Area Studies",
+      "category": "Arts & Humanities",
+      "description": "Covers modern/classical languages, linguistics and regional studies (e.g. South Asian Studies) — directly extends a language A-Level such as Urdu, Arabic or French.",
+      "required": [],
+      "preferred": [
+        "Urdu",
+        "Arabic",
+        "French",
+        "German",
+        "English Language"
+      ],
+      "recommended": [],
+      "grade_band": "Standard-to-competitive — typically ABB-AAB or 65-75% aggregate",
+      "careers": [
+        {
+          "title": "Translator / Interpreter",
+          "note": "Written or live language-conversion work."
+        },
+        {
+          "title": "Diplomat / Foreign Service Officer",
+          "note": "Government international-relations roles."
+        },
+        {
+          "title": "Language Teacher",
+          "note": "Secondary, college or language-school teaching."
+        },
+        {
+          "title": "Localisation Specialist",
+          "note": "Adapting products/content for new-language markets."
+        }
+      ],
+      "employers": [
+        "Foreign ministries/embassies",
+        "International organisations (UN-type bodies)",
+        "Translation/localisation agencies",
+        "Universities"
+      ],
+      "outlook": "Steady niche demand; rare-language and technical-translation skills command a premium.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Joint honours (Language + Business/Law/Politics) broaden career options significantly."
+    },
+    {
+      "id": "social-sciences",
+      "name": "Social Sciences (Politics, Sociology, International Relations)",
+      "category": "Arts & Humanities",
+      "description": "Covers how societies, states and institutions work — a strong fit for History, Politics, Sociology or Global Perspectives A-Levels.",
+      "required": [],
+      "preferred": [
+        "Politics",
+        "Sociology",
+        "History",
+        "Global Perspectives and Research"
+      ],
+      "recommended": [],
+      "grade_band": "Standard-to-competitive — typically ABB-AAB or 70%+ aggregate",
+      "careers": [
+        {
+          "title": "Civil Servant / Policy Analyst",
+          "note": "Government policy research and implementation."
+        },
+        {
+          "title": "Diplomat",
+          "note": "Foreign-service representation roles."
+        },
+        {
+          "title": "NGO / Development Worker",
+          "note": "International development and humanitarian programmes."
+        },
+        {
+          "title": "Political Researcher / Journalist",
+          "note": "Research for politicians, think tanks or media."
+        }
+      ],
+      "employers": [
+        "Government departments",
+        "International organisations and NGOs",
+        "Think tanks",
+        "Media organisations"
+      ],
+      "outlook": "Stable demand in public policy and international development; highly transferable analytical skill set.",
+      "countries": [
+        "UK",
+        "Pakistan",
+        "US",
+        "Canada",
+        "Australia"
+      ],
+      "alt_pathways": "Often combined with a language or economics as a joint honours degree."
+    }
+  ]
+}

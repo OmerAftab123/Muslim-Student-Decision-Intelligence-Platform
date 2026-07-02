@@ -1,0 +1,284 @@
+{
+  "relationships": [
+    {
+      "id": "rel-001",
+      "university_id": "imperial",
+      "program_id": "computer-science",
+      "typical_offer": "Computing BEng: A*A*A/A*AAA including A* in Mathematics",
+      "source_url": "https://www.imperial.ac.uk/study/courses/undergraduate/computing-beng/"
+    },
+    {
+      "id": "rel-002",
+      "university_id": "imperial",
+      "program_id": "electrical-electronic-engineering",
+      "typical_offer": "BEng: A* in Maths plus A/A* in Physics",
+      "source_url": "https://www.imperial.ac.uk/study/courses/undergraduate/2026/electrical-electronic-engineering-beng/"
+    },
+    {
+      "id": "rel-003",
+      "university_id": "imperial",
+      "program_id": "mathematics-statistics",
+      "typical_offer": "Mathematics & Computer Science BEng/MEng: A* in BOTH Maths and Further Maths",
+      "source_url": "https://www.imperial.ac.uk/study/courses/undergraduate/mathematics-computer-science-beng/"
+    },
+    {
+      "id": "rel-004",
+      "university_id": "cambridge",
+      "program_id": "mathematics-statistics",
+      "typical_offer": "Mathematical Tripos: Further Maths is the stated normal minimum requirement; A*A*A plus STEP",
+      "source_url": "https://www.maths.cam.ac.uk/undergrad/admissions/what-do-we-look-for"
+    },
+    {
+      "id": "rel-005",
+      "university_id": "ucl",
+      "program_id": "computer-science",
+      "typical_offer": "BSc Computer Science: A* in Maths or Further Maths required",
+      "source_url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/computer-science-bsc"
+    },
+    {
+      "id": "rel-006",
+      "university_id": "ucl",
+      "program_id": "electrical-electronic-engineering",
+      "typical_offer": "BEng: A* in Maths required, Physics preferred second subject",
+      "source_url": "https://www.ucl.ac.uk/study/prospective-students/undergraduate/courses/electronic-and-electrical-engineering-beng"
+    },
+    {
+      "id": "rel-007",
+      "university_id": "manchester",
+      "program_id": "mathematics-statistics",
+      "typical_offer": "BSc Mathematics with Finance: A*BB including A* in Maths, or AAB with Maths + Further Maths",
+      "source_url": "https://www.manchester.ac.uk/study/undergraduate/courses/2026/00495/bsc-mathematics-with-finance/"
+    },
+    {
+      "id": "rel-008",
+      "university_id": "lse",
+      "program_id": "economics",
+      "typical_offer": "BSc Mathematics with Economics: A* in Maths essential; Further Maths desirable, not required",
+      "source_url": "https://www.lse.ac.uk/study-at-lse/undergraduate/bsc-mathematics-with-economics"
+    },
+    {
+      "id": "rel-009",
+      "university_id": "lse",
+      "program_id": "accounting-finance",
+      "typical_offer": "BSc Accounting and Finance: A in Maths essential",
+      "source_url": "https://www.lse.ac.uk/study-at-lse/undergraduate/bsc-accounting-and-finance"
+    },
+    {
+      "id": "rel-010",
+      "university_id": "lse",
+      "program_id": "actuarial-science",
+      "typical_offer": "BSc Actuarial Science: A in Maths, A* preferred",
+      "source_url": "https://www.lse.ac.uk/study-at-lse/undergraduate/bsc-actuarial-science"
+    },
+    {
+      "id": "rel-011",
+      "university_id": "lse",
+      "program_id": "mathematics-statistics",
+      "typical_offer": "BSc Finance: A* in Maths or Further Maths required",
+      "source_url": "https://www.lse.ac.uk/study-at-lse/undergraduate/bsc-finance"
+    },
+    {
+      "id": "rel-012",
+      "university_id": "warwick",
+      "program_id": "data-science",
+      "typical_offer": "BSc Data Science: A*AA with Maths + Further Maths, or A*A*A* in Maths alone",
+      "source_url": "https://warwick.ac.uk/study/undergraduate/courses/bsc-data-science/"
+    },
+    {
+      "id": "rel-013",
+      "university_id": "leeds",
+      "program_id": "actuarial-science",
+      "typical_offer": "BSc Actuarial Mathematics: AAB/A*BB including A in Maths; AS Further Maths opens an alternative route",
+      "source_url": "https://courses.leeds.ac.uk/f702/actuarial-mathematics-bsc"
+    },
+    {
+      "id": "rel-014",
+      "university_id": "leeds",
+      "program_id": "economics",
+      "typical_offer": "BSc Economics and Mathematics: Maths A-Level required",
+      "source_url": "https://courses.leeds.ac.uk/4393/economics-and-mathematics-bsc"
+    },
+    {
+      "id": "rel-015",
+      "university_id": "southampton",
+      "program_id": "actuarial-science",
+      "typical_offer": "BSc Mathematics with Actuarial Science: strong Maths grade required",
+      "source_url": "https://www.southampton.ac.uk/courses/mathematics-with-actuarial-science-degree-bsc"
+    },
+    {
+      "id": "rel-016",
+      "university_id": "city-st-georges",
+      "program_id": "actuarial-science",
+      "typical_offer": "BSc Actuarial Science (Bayes Business School): A in Maths required",
+      "source_url": "https://www.bayes.citystgeorges.ac.uk/study/undergraduate/courses/actuarial-science"
+    },
+    {
+      "id": "rel-017",
+      "university_id": "city-st-georges",
+      "program_id": "economics",
+      "typical_offer": "BSc Mathematics with Finance and Economics: Maths A-Level required",
+      "source_url": "https://www.citystgeorges.ac.uk/prospective-students/courses/undergraduate/mathematics-with-finance-and-economics"
+    },
+    {
+      "id": "rel-018",
+      "university_id": "qmul",
+      "program_id": "actuarial-science",
+      "typical_offer": "BSc Actuarial Science: AAA including A in Maths",
+      "source_url": "https://www.qmul.ac.uk/undergraduate/coursefinder/courses/2026/actuarial-science/"
+    },
+    {
+      "id": "rel-019",
+      "university_id": "soas",
+      "program_id": "languages-linguistics",
+      "typical_offer": "BA South Asian Studies (Urdu pathway): typically ABB-AAB",
+      "source_url": "https://www.soas.ac.uk/study/undergraduate/undergraduate-entry-requirements"
+    },
+    {
+      "id": "rel-020",
+      "university_id": "nust",
+      "program_id": "computer-science",
+      "typical_offer": "BS Computer Science: Maths mandatory subject",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/"
+    },
+    {
+      "id": "rel-021",
+      "university_id": "nust",
+      "program_id": "accounting-finance",
+      "typical_offer": "BS Accounting & Finance: Maths or Accounting/Finance subject, 60%+",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/"
+    },
+    {
+      "id": "rel-022",
+      "university_id": "nust",
+      "program_id": "economics",
+      "typical_offer": "BS Economics: Maths mandatory subject",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/"
+    },
+    {
+      "id": "rel-023",
+      "university_id": "nust",
+      "program_id": "electrical-electronic-engineering",
+      "typical_offer": "BE Electrical Engineering: Pre-Engineering group, Maths + Physics mandatory",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/"
+    },
+    {
+      "id": "rel-024",
+      "university_id": "nust",
+      "program_id": "mechanical-engineering",
+      "typical_offer": "BE Mechanical Engineering: Pre-Engineering group, Maths + Physics mandatory",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/"
+    },
+    {
+      "id": "rel-025",
+      "university_id": "nust",
+      "program_id": "civil-engineering",
+      "typical_offer": "BE Civil Engineering: Pre-Engineering group, Maths + Physics mandatory",
+      "source_url": "https://nust.edu.pk/admissions/undergraduates/eligibility-criteria-for-ug-programmes/"
+    },
+    {
+      "id": "rel-026",
+      "university_id": "lums",
+      "program_id": "economics",
+      "typical_offer": "BSc (Hons) Economics: exempt from the Economics remedial course with A-Level Economics",
+      "source_url": "https://lums.edu.pk/programmes/bsc-honours-economics"
+    },
+    {
+      "id": "rel-027",
+      "university_id": "lums",
+      "program_id": "computer-science",
+      "typical_offer": "BSc Economics and Computer Science (Joint Major): strong Maths grade",
+      "source_url": "https://lums.edu.pk/programmes/bsc-hons-economics-and-computer-science"
+    },
+    {
+      "id": "rel-028",
+      "university_id": "lums",
+      "program_id": "data-science",
+      "typical_offer": "BSc Economics, Data and Computer Science (Joint Major): strong Maths grade",
+      "source_url": "https://lums.edu.pk/programmes/bsc-honours-economics-data-and-computer-science-joint-major"
+    },
+    {
+      "id": "rel-029",
+      "university_id": "lums",
+      "program_id": "mathematics-statistics",
+      "typical_offer": "BS Economics & Mathematics (Joint Major): no Further Maths needed",
+      "source_url": "https://lums.edu.pk/programmes/bs-economics-and-mathematics-joint-major"
+    },
+    {
+      "id": "rel-030",
+      "university_id": "iba-karachi",
+      "program_id": "economics",
+      "typical_offer": "BS Economics: A-Level average of 1B + 2C",
+      "source_url": "https://admissions.iba.edu.pk/AdmissionPolicy.php"
+    },
+    {
+      "id": "rel-031",
+      "university_id": "iba-karachi",
+      "program_id": "computer-science",
+      "typical_offer": "BS Computer Science: A-Level average 1B + 2C including Maths, no grade below C",
+      "source_url": "https://admissions.iba.edu.pk/AdmissionPolicy.php"
+    },
+    {
+      "id": "rel-032",
+      "university_id": "iba-karachi",
+      "program_id": "accounting-finance",
+      "typical_offer": "BS Accounting & Finance: A-Level average 1B + 2C",
+      "source_url": "https://admissions.iba.edu.pk/"
+    },
+    {
+      "id": "rel-033",
+      "university_id": "iba-karachi",
+      "program_id": "data-science",
+      "typical_offer": "BS Business Analytics / BS Economics & Data Science: A-Level average 1B + 2C",
+      "source_url": "https://admissions.iba.edu.pk/"
+    },
+    {
+      "id": "rel-034",
+      "university_id": "fuuast",
+      "program_id": "languages-linguistics",
+      "typical_offer": "BS Urdu: Intermediate/FA/FSc with minimum marks",
+      "source_url": "https://fuuast.edu.pk/"
+    },
+    {
+      "id": "rel-035",
+      "university_id": "fuuast",
+      "program_id": "media-journalism",
+      "typical_offer": "BS Mass Communication: Intermediate/equivalent, open merit",
+      "source_url": "https://fuuast.edu.pk/"
+    },
+    {
+      "id": "rel-036",
+      "university_id": "numl",
+      "program_id": "media-journalism",
+      "typical_offer": "BS Media & Communication Studies: A-Level with 50% marks",
+      "source_url": "https://www.numl.edu.pk/programs/program/258"
+    },
+    {
+      "id": "rel-037",
+      "university_id": "toronto",
+      "program_id": "computer-science",
+      "typical_offer": "Maths AS/A-Level required wherever a Calculus prerequisite applies",
+      "source_url": "https://future.utoronto.ca/requirements-international-high-schools"
+    },
+    {
+      "id": "rel-038",
+      "university_id": "nyu",
+      "program_id": "computer-science",
+      "typical_offer": "A-Levels accepted directly; A-Level Maths recommended for CS/Stern/Engineering applicants",
+      "source_url": "https://www.nyu.edu/admissions/undergraduate-admissions/how-to-apply/all-freshmen-applicants/high-secondary-school-preparation.html"
+    },
+    {
+      "id": "rel-039",
+      "university_id": "melbourne",
+      "program_id": "natural-sciences",
+      "typical_offer": "Minimum 3 A-Levels with at least a C grade in prerequisite subjects",
+      "source_url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications/entry-requirements/recognised-international-qualifications"
+    },
+    {
+      "id": "rel-040",
+      "university_id": "aus-sharjah",
+      "program_id": "mechanical-engineering",
+      "typical_offer": "Minimum average of approximately 85% in final year of secondary school",
+      "source_url": "https://www.aus.edu/admissions/bachelors-degrees/application-requirements"
+    }
+  ]
+}

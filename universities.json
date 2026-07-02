@@ -1,0 +1,296 @@
+{
+  "universities": [
+    {
+      "id": "imperial",
+      "name": "Imperial College London",
+      "country": "United Kingdom",
+      "qs_rank_2026": 2,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Offers expressed as specific A-Level grade combinations (e.g. A*A*A).",
+      "url": "https://www.imperial.ac.uk/study/courses/undergraduate/",
+      "programs": [
+        "computer-science",
+        "electrical-electronic-engineering",
+        "mechanical-engineering",
+        "mathematics-statistics",
+        "artificial-intelligence",
+        "medicine"
+      ]
+    },
+    {
+      "id": "cambridge",
+      "name": "University of Cambridge",
+      "country": "United Kingdom",
+      "qs_rank_2026": 6,
+      "entry_model": "UK fixed grade tariff + STEP/subject tests",
+      "model_note": "Among the most academically demanding offers in the world; Further Maths is the stated normal minimum for Mathematics.",
+      "url": "https://www.undergraduate.study.cam.ac.uk/",
+      "programs": [
+        "mathematics-statistics",
+        "natural-sciences",
+        "law",
+        "medicine"
+      ]
+    },
+    {
+      "id": "ucl",
+      "name": "University College London (UCL)",
+      "country": "United Kingdom",
+      "qs_rank_2026": 9,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Offers expressed as specific A-Level grade combinations.",
+      "url": "https://www.ucl.ac.uk/prospective-students/undergraduate",
+      "programs": [
+        "computer-science",
+        "electrical-electronic-engineering",
+        "law",
+        "architecture",
+        "medicine"
+      ]
+    },
+    {
+      "id": "manchester",
+      "name": "University of Manchester",
+      "country": "United Kingdom",
+      "qs_rank_2026": 35,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Offers expressed as specific A-Level grade combinations; alternative routes via Maths + Further Maths.",
+      "url": "https://www.manchester.ac.uk/study/undergraduate/",
+      "programs": [
+        "mathematics-statistics",
+        "accounting-finance"
+      ]
+    },
+    {
+      "id": "lse",
+      "name": "London School of Economics and Political Science (LSE)",
+      "country": "United Kingdom",
+      "qs_rank_2026": 56,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "A* in Maths is essential for most quantitative programmes; Further Maths is desirable but not always required.",
+      "url": "https://www.lse.ac.uk/study-at-lse/undergraduate",
+      "programs": [
+        "economics",
+        "accounting-finance",
+        "actuarial-science",
+        "mathematics-statistics",
+        "law"
+      ]
+    },
+    {
+      "id": "warwick",
+      "name": "University of Warwick",
+      "country": "United Kingdom",
+      "qs_rank_2026": 74,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Data Science offer drops from A*A*A* to A*AA if you present Maths + Further Maths.",
+      "url": "https://warwick.ac.uk/study/undergraduate/",
+      "programs": [
+        "data-science",
+        "mathematics-statistics",
+        "economics"
+      ]
+    },
+    {
+      "id": "leeds",
+      "name": "University of Leeds",
+      "country": "United Kingdom",
+      "qs_rank_2026": 86,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Actuarial Mathematics offers an AAB/A*BB route that opens up with AS Further Maths.",
+      "url": "https://courses.leeds.ac.uk/",
+      "programs": [
+        "actuarial-science",
+        "economics"
+      ]
+    },
+    {
+      "id": "southampton",
+      "name": "University of Southampton",
+      "country": "United Kingdom",
+      "qs_rank_2026": 87,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Offers expressed as specific A-Level grade combinations.",
+      "url": "https://www.southampton.ac.uk/courses",
+      "programs": [
+        "actuarial-science",
+        "mathematics-statistics"
+      ]
+    },
+    {
+      "id": "city-st-georges",
+      "name": "City St George's, University of London (Bayes Business School)",
+      "country": "United Kingdom",
+      "qs_rank_2026": null,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Bayes Business School requires an A in Maths for Actuarial Science.",
+      "url": "https://www.citystgeorges.ac.uk/",
+      "programs": [
+        "actuarial-science",
+        "mathematics-statistics",
+        "economics"
+      ]
+    },
+    {
+      "id": "soas",
+      "name": "SOAS, University of London",
+      "country": "United Kingdom",
+      "qs_rank_2026": null,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "Typically ABB-AAB; Urdu/regional-language background is an asset for South Asian Studies, not a requirement.",
+      "url": "https://www.soas.ac.uk/study",
+      "programs": [
+        "languages-linguistics",
+        "social-sciences"
+      ]
+    },
+    {
+      "id": "qmul",
+      "name": "Queen Mary University of London",
+      "country": "United Kingdom",
+      "qs_rank_2026": null,
+      "entry_model": "UK fixed grade tariff",
+      "model_note": "AAA including an A in Maths for Actuarial Science.",
+      "url": "https://www.qmul.ac.uk/undergraduate/",
+      "programs": [
+        "actuarial-science"
+      ]
+    },
+    {
+      "id": "nust",
+      "name": "National University of Sciences & Technology (NUST)",
+      "country": "Pakistan",
+      "qs_rank_2026": 371,
+      "entry_model": "Composite score (academic record + NUST entry test)",
+      "model_note": "Maths is mandatory for CS/Economics/Accounting & Finance; Pre-Engineering group (Maths+Physics) required for all engineering disciplines.",
+      "url": "https://nust.edu.pk/admissions/",
+      "programs": [
+        "computer-science",
+        "accounting-finance",
+        "economics",
+        "electrical-electronic-engineering",
+        "mechanical-engineering",
+        "civil-engineering"
+      ]
+    },
+    {
+      "id": "lums",
+      "name": "Lahore University of Management Sciences (LUMS)",
+      "country": "Pakistan",
+      "qs_rank_2026": 555,
+      "entry_model": "Composite score (academic record + SAT/LCAT-style test + interview)",
+      "model_note": "Pakistan's top-ranked institution for business and management education (QS Subject 2026: 101-150 band).",
+      "url": "https://lums.edu.pk/admissions",
+      "programs": [
+        "economics",
+        "computer-science",
+        "data-science",
+        "business-management",
+        "law"
+      ]
+    },
+    {
+      "id": "iba-karachi",
+      "name": "Institute of Business Administration (IBA), Karachi",
+      "country": "Pakistan",
+      "qs_rank_2026": null,
+      "entry_model": "Composite score (A-Level average + IBA aptitude test + interview)",
+      "model_note": "Typical A-Level requirement: average of 1 B + 2 C grades; ranked 151-250 globally for Business & Economics (QS Subject 2026).",
+      "url": "https://admissions.iba.edu.pk/",
+      "programs": [
+        "economics",
+        "computer-science",
+        "accounting-finance",
+        "data-science",
+        "business-management"
+      ]
+    },
+    {
+      "id": "fuuast",
+      "name": "Federal Urdu University of Arts, Sciences & Technology (FUUAST), Karachi",
+      "country": "Pakistan",
+      "qs_rank_2026": null,
+      "entry_model": "Merit-based on Intermediate/FA/FSc marks",
+      "model_note": "A specialist Urdu-medium-friendly public university with dedicated Urdu and Mass Communication departments.",
+      "url": "https://fuuast.edu.pk/",
+      "programs": [
+        "languages-linguistics",
+        "media-journalism"
+      ]
+    },
+    {
+      "id": "numl",
+      "name": "National University of Modern Languages (NUML), Islamabad",
+      "country": "Pakistan",
+      "qs_rank_2026": null,
+      "entry_model": "Merit-based; A-Level accepted with minimum 50% marks",
+      "model_note": "Specialist languages-focused public university with strong Media & Communication Studies programmes.",
+      "url": "https://www.numl.edu.pk/",
+      "programs": [
+        "languages-linguistics",
+        "media-journalism"
+      ]
+    },
+    {
+      "id": "toronto",
+      "name": "University of Toronto",
+      "country": "Canada",
+      "qs_rank_2026": null,
+      "entry_model": "Holistic, no fixed grade tariff",
+      "model_note": "Requires 3 A-Levels + 5 IGCSE/O-Levels; Maths AS/A-Level needed wherever a Calculus prerequisite applies (most STEM/business programmes). SAT/ACT optional.",
+      "url": "https://future.utoronto.ca/",
+      "programs": [
+        "computer-science",
+        "mechanical-engineering",
+        "economics",
+        "natural-sciences"
+      ]
+    },
+    {
+      "id": "nyu",
+      "name": "New York University (NYU)",
+      "country": "United States",
+      "qs_rank_2026": null,
+      "entry_model": "Holistic, no fixed grade tariff",
+      "model_note": "Accepts A-Levels directly for international applicants; recommends A-Level Maths for Stern Business/CS/Engineering, and Physics+Chemistry+Calculus for Tandon Engineering.",
+      "url": "https://www.nyu.edu/admissions/undergraduate-admissions.html",
+      "programs": [
+        "computer-science",
+        "business-management",
+        "mechanical-engineering"
+      ]
+    },
+    {
+      "id": "melbourne",
+      "name": "University of Melbourne",
+      "country": "Australia",
+      "qs_rank_2026": null,
+      "entry_model": "ATAR-equivalent score",
+      "model_note": "Accepts A-Levels directly; minimum 3 A-Levels with at least a C grade in prerequisite subjects; publishes a guaranteed entry score per A-Level equivalent.",
+      "url": "https://study.unimelb.edu.au/how-to-apply/undergraduate-study/international-applications",
+      "programs": [
+        "natural-sciences",
+        "business-management",
+        "law",
+        "social-sciences"
+      ]
+    },
+    {
+      "id": "aus-sharjah",
+      "name": "American University of Sharjah (AUS)",
+      "country": "United Arab Emirates",
+      "qs_rank_2024": 622,
+      "qs_rank_2026": null,
+      "entry_model": "Minimum-average based, American liberal-arts model",
+      "model_note": "Minimum required average is roughly 85% in the final year of secondary school (or best two of the last three years); A-Levels are recognised via equivalency.",
+      "url": "https://www.aus.edu/admissions/bachelors-degrees",
+      "programs": [
+        "mechanical-engineering",
+        "electrical-electronic-engineering",
+        "business-management",
+        "architecture",
+        "media-journalism"
+      ]
+    }
+  ]
+}

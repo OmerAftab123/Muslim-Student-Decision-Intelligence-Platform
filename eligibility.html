@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eligibility Checker — Global A-Level Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="nav-brand"><span class="mark">GE</span> Global A-Level Explorer</a>
+    <button class="nav-toggle" id="nav-toggle">Menu ☰</button>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="programs.html">Programs</a>
+      <a href="universities.html">Universities</a>
+      <a href="eligibility.html">Eligibility Checker</a>
+      <a href="careers.html">Careers</a>
+      <a href="islamic-rulings.html">Islamic Rulings</a>
+      <a href="about.html">About &amp; References</a>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <p class="eyebrow">Eligibility Checker</p>
+    <h1>What do your subjects actually unlock?</h1>
+    <p>Tick your A-Level subjects, pick a rough grade band, and get a ranked list of program matches labelled Safe / Target / Stretch — based on subject overlap and typical grade demands in our dataset.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="scope-banner">
+      This is a guide, not a guarantee — it compares subject overlap and a rough grade band against typical published offers. Always confirm the exact current requirement on the university's own page before applying.
+    </div>
+    <div class="checker-layout">
+      <div class="checker-panel">
+        <h3>Your A-Levels</h3>
+        <div class="subject-checks" id="subject-checks"></div>
+        <h3>Your rough grade band</h3>
+        <select class="grade-select" id="grade-band-select">
+          <option value="top">Mostly A*/A (top tier)</option>
+          <option value="high" selected>Mostly A/B (high)</option>
+          <option value="mid">Mostly B/C (mid)</option>
+          <option value="standard">Mostly C/D (standard)</option>
+        </select>
+        <button class="check-btn" id="check-btn">Check eligibility</button>
+      </div>
+      <div id="eligibility-results">
+        <div class="empty-state">Select your subjects and grade band, then click "Check eligibility".</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="eyebrow">Scope Note</p>
+    <p>The matching engine runs entirely in your browser against the curated dataset — nothing is sent anywhere.</p>
+    <div class="foot-links">
+      <a href="about.html">About &amp; References</a>
+      <a href="https://docs.github.com/en/pages" target="_blank" rel="noopener">Deploying to GitHub Pages ↗</a>
+    </div>
+    <p class="sign">GLOBAL A-LEVEL EXPLORER · BUILT JUNE 2026</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

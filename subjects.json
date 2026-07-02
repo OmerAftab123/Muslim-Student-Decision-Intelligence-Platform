@@ -1,0 +1,988 @@
+{
+  "subjects": [
+    {
+      "id": "accounting",
+      "name": "Accounting",
+      "category": "Business & Economics",
+      "relevance": "Direct foundation for accounting, finance and business-analysis degrees worldwide.",
+      "careers": [
+        "Accountant",
+        "Auditor",
+        "Financial Analyst",
+        "Tax Consultant"
+      ]
+    },
+    {
+      "id": "afrikaans",
+      "name": "Afrikaans",
+      "category": "Languages",
+      "relevance": "A modern language credential useful for linguistics, translation and area-studies routes.",
+      "careers": [
+        "Translator",
+        "Diplomat",
+        "Language Teacher",
+        "Localisation Specialist"
+      ]
+    },
+    {
+      "id": "ancient-history",
+      "name": "Ancient History",
+      "category": "Humanities",
+      "relevance": "Builds source-analysis and essay skills valued by history, classics and law admissions.",
+      "careers": [
+        "Archivist",
+        "Museum Curator",
+        "Heritage Officer",
+        "Academic Researcher"
+      ]
+    },
+    {
+      "id": "arabic",
+      "name": "Arabic",
+      "category": "Languages",
+      "relevance": "Opens language, translation, regional-studies and diplomacy routes, especially Gulf/MENA-focused careers.",
+      "careers": [
+        "Translator/Interpreter",
+        "Diplomat",
+        "Journalist",
+        "Regional Analyst"
+      ]
+    },
+    {
+      "id": "art-and-design",
+      "name": "Art and Design",
+      "category": "Arts, Design & Media",
+      "relevance": "Core portfolio subject for art, design, architecture and creative-industry degrees.",
+      "careers": [
+        "Graphic Designer",
+        "Illustrator",
+        "Art Director",
+        "UX/UI Designer"
+      ]
+    },
+    {
+      "id": "bengali",
+      "name": "Bengali",
+      "category": "Languages",
+      "relevance": "Supports language, linguistics and South Asian studies pathways.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Civil Servant",
+        "Community/NGO Worker"
+      ]
+    },
+    {
+      "id": "biblical-hebrew",
+      "name": "Biblical Hebrew",
+      "category": "Religious & Classical Studies",
+      "relevance": "Specialist language base for theology, biblical studies and ancient-text research.",
+      "careers": [
+        "Theologian",
+        "Academic Researcher",
+        "Archivist",
+        "Religious Educator"
+      ]
+    },
+    {
+      "id": "biblical-studies",
+      "name": "Biblical Studies",
+      "category": "Religious & Classical Studies",
+      "relevance": "Foundation for theology, religious studies and some humanities programmes.",
+      "careers": [
+        "Religious Educator",
+        "Chaplain",
+        "Academic Researcher",
+        "Writer"
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "category": "Sciences",
+      "relevance": "Core science for medicine, dentistry, veterinary, pharmacy and life-science degrees.",
+      "careers": [
+        "Doctor",
+        "Biomedical Scientist",
+        "Pharmacist",
+        "Research Scientist"
+      ]
+    },
+    {
+      "id": "built-environment",
+      "name": "Built Environment",
+      "category": "Applied & Vocational",
+      "relevance": "Practical foundation for construction management, surveying and built-environment degrees.",
+      "careers": [
+        "Quantity Surveyor",
+        "Construction Manager",
+        "Urban Planner",
+        "Facilities Manager"
+      ]
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "category": "Business & Economics",
+      "relevance": "Broad foundation for business, management and entrepreneurship degrees.",
+      "careers": [
+        "Business Manager",
+        "Entrepreneur",
+        "Marketing Executive",
+        "Operations Analyst"
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "category": "Sciences",
+      "relevance": "Core science for medicine, pharmacy, chemical engineering and most life/physical sciences.",
+      "careers": [
+        "Pharmacist",
+        "Chemical Engineer",
+        "Forensic Scientist",
+        "Research Chemist"
+      ]
+    },
+    {
+      "id": "chinese",
+      "name": "Chinese",
+      "category": "Languages",
+      "relevance": "Supports language, international-business and East-Asian-studies degrees.",
+      "careers": [
+        "Translator",
+        "Trade Specialist",
+        "Diplomat",
+        "International Business Manager"
+      ]
+    },
+    {
+      "id": "classical-civilisation",
+      "name": "Classical Civilisation",
+      "category": "Religious & Classical Studies",
+      "relevance": "Humanities credential useful for classics, history and law admissions.",
+      "careers": [
+        "Museum Curator",
+        "Academic Researcher",
+        "Teacher",
+        "Heritage Officer"
+      ]
+    },
+    {
+      "id": "classical-greek",
+      "name": "Classical Greek",
+      "category": "Languages",
+      "relevance": "Classical language valued by classics, theology and some law/Oxbridge humanities routes.",
+      "careers": [
+        "Academic Researcher",
+        "Teacher",
+        "Archivist",
+        "Theologian"
+      ]
+    },
+    {
+      "id": "computer-science",
+      "name": "Computer Science",
+      "category": "Mathematics & Computing",
+      "relevance": "Direct foundation for computer science, software engineering, AI and data degrees.",
+      "careers": [
+        "Software Engineer",
+        "Data Scientist",
+        "Cybersecurity Analyst",
+        "AI/ML Engineer"
+      ]
+    },
+    {
+      "id": "criminology",
+      "name": "Criminology",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Direct route into criminology, criminal justice and policing-related degrees.",
+      "careers": [
+        "Police Officer",
+        "Probation Officer",
+        "Criminal Analyst",
+        "Policy Researcher"
+      ]
+    },
+    {
+      "id": "design-and-technology",
+      "name": "Design and Technology",
+      "category": "Arts, Design & Media",
+      "relevance": "Hands-on foundation for product design, engineering and industrial-design degrees.",
+      "careers": [
+        "Product Designer",
+        "Industrial Designer",
+        "Engineer",
+        "CAD Technician"
+      ]
+    },
+    {
+      "id": "design-and-textiles",
+      "name": "Design and Textiles",
+      "category": "Arts, Design & Media",
+      "relevance": "Specialist route into fashion, textiles and materials-design degrees.",
+      "careers": [
+        "Textile Designer",
+        "Fashion Designer",
+        "Costume Designer",
+        "Buyer"
+      ]
+    },
+    {
+      "id": "digital-media-and-design",
+      "name": "Digital Media and Design",
+      "category": "Arts, Design & Media",
+      "relevance": "Foundation for digital design, UX/UI and interactive-media degrees.",
+      "careers": [
+        "UX/UI Designer",
+        "Motion Designer",
+        "Web Designer",
+        "Game Artist"
+      ]
+    },
+    {
+      "id": "digital-technology",
+      "name": "Digital Technology",
+      "category": "Mathematics & Computing",
+      "relevance": "Supports computing, IT and digital-business degrees.",
+      "careers": [
+        "IT Consultant",
+        "Systems Analyst",
+        "Digital Product Manager",
+        "Software Developer"
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "category": "Business & Economics",
+      "relevance": "Core subject for economics, finance, PPE and business-related degrees.",
+      "careers": [
+        "Economist",
+        "Financial Analyst",
+        "Policy Advisor",
+        "Investment Banker"
+      ]
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "category": "Sciences",
+      "relevance": "Specialist route into electrical/electronic engineering and computer-engineering degrees.",
+      "careers": [
+        "Electronics Engineer",
+        "Embedded Systems Engineer",
+        "Telecoms Engineer",
+        "Hardware Designer"
+      ]
+    },
+    {
+      "id": "english-language",
+      "name": "English Language",
+      "category": "Languages",
+      "relevance": "Strong general-purpose humanities subject valued across almost every degree, especially media and law.",
+      "careers": [
+        "Journalist",
+        "Editor",
+        "Copywriter",
+        "Civil Servant"
+      ]
+    },
+    {
+      "id": "english-language-and-literature",
+      "name": "English Language and Literature",
+      "category": "Languages",
+      "relevance": "Combined skills base for English, journalism, law and humanities degrees.",
+      "careers": [
+        "Writer",
+        "Editor",
+        "Teacher",
+        "Publishing Professional"
+      ]
+    },
+    {
+      "id": "english-literature",
+      "name": "English Literature",
+      "category": "Languages",
+      "relevance": "Core humanities subject for English, law, journalism and media degrees.",
+      "careers": [
+        "Author/Writer",
+        "Editor",
+        "Teacher",
+        "Literary Agent"
+      ]
+    },
+    {
+      "id": "environmental-management",
+      "name": "Environmental Management",
+      "category": "Sciences",
+      "relevance": "Foundation for environmental science, sustainability and resource-management degrees.",
+      "careers": [
+        "Environmental Consultant",
+        "Sustainability Manager",
+        "Conservation Officer",
+        "Policy Analyst"
+      ]
+    },
+    {
+      "id": "environmental-science",
+      "name": "Environmental Science",
+      "category": "Sciences",
+      "relevance": "Core science for environmental science, ecology and sustainability degrees.",
+      "careers": [
+        "Environmental Scientist",
+        "Ecologist",
+        "Climate Analyst",
+        "Conservation Officer"
+      ]
+    },
+    {
+      "id": "environmental-technology",
+      "name": "Environmental Technology",
+      "category": "Sciences",
+      "relevance": "Applied science route into renewable-energy and environmental-engineering degrees.",
+      "careers": [
+        "Renewable Energy Engineer",
+        "Environmental Engineer",
+        "Sustainability Consultant",
+        "Energy Analyst"
+      ]
+    },
+    {
+      "id": "fashion-and-textiles",
+      "name": "Fashion and Textiles",
+      "category": "Arts, Design & Media",
+      "relevance": "Specialist creative subject for fashion design and textile-technology degrees.",
+      "careers": [
+        "Fashion Designer",
+        "Textile Technologist",
+        "Stylist",
+        "Buyer"
+      ]
+    },
+    {
+      "id": "film-studies",
+      "name": "Film Studies",
+      "category": "Arts, Design & Media",
+      "relevance": "Foundation for film, media and screen-production degrees.",
+      "careers": [
+        "Film Director",
+        "Screenwriter",
+        "Film Editor",
+        "Producer"
+      ]
+    },
+    {
+      "id": "food-science-and-nutrition",
+      "name": "Food Science and Nutrition",
+      "category": "Applied & Vocational",
+      "relevance": "Foundation for nutrition, dietetics and food-science degrees.",
+      "careers": [
+        "Dietitian",
+        "Food Scientist",
+        "Nutritionist",
+        "Quality Assurance Manager"
+      ]
+    },
+    {
+      "id": "french",
+      "name": "French",
+      "category": "Languages",
+      "relevance": "Supports modern-languages, translation, diplomacy and international-relations degrees.",
+      "careers": [
+        "Translator/Interpreter",
+        "Diplomat",
+        "Teacher",
+        "International Trade Specialist"
+      ]
+    },
+    {
+      "id": "further-mathematics",
+      "name": "Further Mathematics",
+      "category": "Mathematics & Computing",
+      "relevance": "Raises ceiling on the most maths-intensive degrees and is often required or preferred for elite maths/engineering courses.",
+      "careers": [
+        "Quantitative Analyst",
+        "Research Mathematician",
+        "Actuary",
+        "Aerospace Engineer"
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Bridges sciences and humanities; useful for geography, environment, planning and development degrees.",
+      "careers": [
+        "Urban Planner",
+        "Geospatial Analyst",
+        "Environmental Consultant",
+        "Humanitarian Worker"
+      ]
+    },
+    {
+      "id": "geology",
+      "name": "Geology",
+      "category": "Sciences",
+      "relevance": "Core science for geology, earth-science and mining/petroleum-engineering degrees.",
+      "careers": [
+        "Geologist",
+        "Petroleum Engineer",
+        "Mining Engineer",
+        "Seismic Analyst"
+      ]
+    },
+    {
+      "id": "german",
+      "name": "German",
+      "category": "Languages",
+      "relevance": "Supports modern-languages, engineering-exchange and international-business degrees.",
+      "careers": [
+        "Translator/Interpreter",
+        "International Business Manager",
+        "Teacher",
+        "Diplomat"
+      ]
+    },
+    {
+      "id": "global-perspectives-and-research",
+      "name": "Global Perspectives and Research",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Critical-thinking and research-skills subject useful across humanities and social-science degrees.",
+      "careers": [
+        "Policy Analyst",
+        "Researcher",
+        "Journalist",
+        "NGO Programme Officer"
+      ]
+    },
+    {
+      "id": "greek",
+      "name": "Greek",
+      "category": "Languages",
+      "relevance": "Modern or classical language route into linguistics, classics and area-studies degrees.",
+      "careers": [
+        "Translator",
+        "Academic Researcher",
+        "Teacher",
+        "Diplomat"
+      ]
+    },
+    {
+      "id": "gujarati",
+      "name": "Gujarati",
+      "category": "Languages",
+      "relevance": "Supports language, linguistics and South Asian studies pathways.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Community Liaison Officer",
+        "Civil Servant"
+      ]
+    },
+    {
+      "id": "health-and-social-care",
+      "name": "Health and Social Care",
+      "category": "Applied & Vocational",
+      "relevance": "Foundation for nursing, social work and allied-health degrees.",
+      "careers": [
+        "Nurse",
+        "Social Worker",
+        "Healthcare Manager",
+        "Occupational Therapist"
+      ]
+    },
+    {
+      "id": "hindi",
+      "name": "Hindi",
+      "category": "Languages",
+      "relevance": "Supports language, linguistics and South Asian studies pathways.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Civil Servant",
+        "Media Professional"
+      ]
+    },
+    {
+      "id": "hinduism",
+      "name": "Hinduism",
+      "category": "Religious & Classical Studies",
+      "relevance": "Religious-studies subject useful for theology, philosophy and comparative-religion degrees.",
+      "careers": [
+        "Religious Educator",
+        "Academic Researcher",
+        "Interfaith Officer",
+        "Writer"
+      ]
+    },
+    {
+      "id": "history",
+      "name": "History",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Strong essay-based humanities subject valued for history, law, politics and journalism degrees.",
+      "careers": [
+        "Historian",
+        "Lawyer",
+        "Civil Servant",
+        "Journalist"
+      ]
+    },
+    {
+      "id": "history-of-art",
+      "name": "History of Art",
+      "category": "Arts, Design & Media",
+      "relevance": "Foundation for art history, museum studies and curatorial degrees.",
+      "careers": [
+        "Museum Curator",
+        "Art Auctioneer",
+        "Art Critic",
+        "Gallery Manager"
+      ]
+    },
+    {
+      "id": "information-technology",
+      "name": "Information Technology",
+      "category": "Mathematics & Computing",
+      "relevance": "Foundation for IT, information-systems and business-computing degrees.",
+      "careers": [
+        "IT Consultant",
+        "Systems Administrator",
+        "Business Analyst",
+        "Network Engineer"
+      ]
+    },
+    {
+      "id": "irish",
+      "name": "Irish",
+      "category": "Languages",
+      "relevance": "Modern-language credential supporting linguistics and Celtic-studies routes.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Civil Servant",
+        "Broadcaster"
+      ]
+    },
+    {
+      "id": "islamic-studies",
+      "name": "Islamic Studies",
+      "category": "Religious & Classical Studies",
+      "relevance": "Foundation for Islamic studies, theology and Islamic-finance-adjacent degrees.",
+      "careers": [
+        "Religious Scholar/Educator",
+        "Islamic Finance Analyst",
+        "Chaplain",
+        "Academic Researcher"
+      ]
+    },
+    {
+      "id": "italian",
+      "name": "Italian",
+      "category": "Languages",
+      "relevance": "Supports modern-languages, history-of-art and international-business degrees.",
+      "careers": [
+        "Translator/Interpreter",
+        "Tour Guide",
+        "Diplomat",
+        "Teacher"
+      ]
+    },
+    {
+      "id": "japanese",
+      "name": "Japanese",
+      "category": "Languages",
+      "relevance": "Supports language, international-business and East-Asian-studies degrees.",
+      "careers": [
+        "Translator",
+        "Trade Specialist",
+        "Diplomat",
+        "Localisation Specialist"
+      ]
+    },
+    {
+      "id": "journalism",
+      "name": "Journalism",
+      "category": "Arts, Design & Media",
+      "relevance": "Direct foundation for journalism, media and mass-communication degrees.",
+      "careers": [
+        "Journalist",
+        "News Editor",
+        "Broadcaster",
+        "Content Strategist"
+      ]
+    },
+    {
+      "id": "latin",
+      "name": "Latin",
+      "category": "Languages",
+      "relevance": "Classical language valued by classics, law and some Oxbridge humanities admissions.",
+      "careers": [
+        "Academic Researcher",
+        "Teacher",
+        "Archivist",
+        "Lawyer"
+      ]
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Direct foundation for law degrees and legal-studies routes.",
+      "careers": [
+        "Lawyer/Advocate",
+        "Legal Consultant",
+        "Judge (post-qualification)",
+        "Compliance Officer"
+      ]
+    },
+    {
+      "id": "life-and-health-sciences",
+      "name": "Life and Health Sciences",
+      "category": "Sciences",
+      "relevance": "Broad life-sciences foundation for medicine-adjacent and allied-health degrees.",
+      "careers": [
+        "Biomedical Scientist",
+        "Healthcare Professional",
+        "Research Assistant",
+        "Public Health Officer"
+      ]
+    },
+    {
+      "id": "marine-science",
+      "name": "Marine Science",
+      "category": "Sciences",
+      "relevance": "Specialist science for marine biology, oceanography and conservation degrees.",
+      "careers": [
+        "Marine Biologist",
+        "Oceanographer",
+        "Conservation Officer",
+        "Fisheries Scientist"
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "category": "Mathematics & Computing",
+      "relevance": "The single most widely required subject across STEM, finance, economics and computing degrees.",
+      "careers": [
+        "Data Scientist",
+        "Actuary",
+        "Engineer",
+        "Quantitative Analyst"
+      ]
+    },
+    {
+      "id": "media-studies",
+      "name": "Media Studies",
+      "category": "Arts, Design & Media",
+      "relevance": "Foundation for media, communications and film/TV-production degrees.",
+      "careers": [
+        "Media Producer",
+        "PR Specialist",
+        "Content Creator",
+        "Broadcast Journalist"
+      ]
+    },
+    {
+      "id": "modern-hebrew",
+      "name": "Modern Hebrew",
+      "category": "Languages",
+      "relevance": "Supports language, Middle-Eastern-studies and diplomacy routes.",
+      "careers": [
+        "Translator",
+        "Diplomat",
+        "Academic Researcher",
+        "Teacher"
+      ]
+    },
+    {
+      "id": "moving-image-arts",
+      "name": "Moving Image Arts",
+      "category": "Arts, Design & Media",
+      "relevance": "Production-focused foundation for film, animation and television degrees.",
+      "careers": [
+        "Film Editor",
+        "Animator",
+        "Cinematographer",
+        "Producer"
+      ]
+    },
+    {
+      "id": "persian",
+      "name": "Persian",
+      "category": "Languages",
+      "relevance": "Supports language, Middle-Eastern and area-studies degrees.",
+      "careers": [
+        "Translator",
+        "Diplomat",
+        "Academic Researcher",
+        "Regional Analyst"
+      ]
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Strong logical-reasoning subject valued by law, PPE and politics admissions.",
+      "careers": [
+        "Lawyer",
+        "Policy Analyst",
+        "Academic Researcher",
+        "Writer/Journalist"
+      ]
+    },
+    {
+      "id": "physical-education",
+      "name": "Physical Education",
+      "category": "Applied & Vocational",
+      "relevance": "Foundation for sports science, coaching and physiotherapy-adjacent degrees.",
+      "careers": [
+        "Sports Coach",
+        "Physiotherapist",
+        "PE Teacher",
+        "Sports Scientist"
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "category": "Sciences",
+      "relevance": "Essential second science for almost all engineering disciplines and physical-sciences degrees.",
+      "careers": [
+        "Engineer (all disciplines)",
+        "Physicist",
+        "Data Scientist",
+        "Aerospace Engineer"
+      ]
+    },
+    {
+      "id": "polish",
+      "name": "Polish",
+      "category": "Languages",
+      "relevance": "Modern-language credential supporting linguistics and translation routes.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Civil Servant",
+        "Trade Specialist"
+      ]
+    },
+    {
+      "id": "politics",
+      "name": "Politics",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Foundation for politics, international-relations and public-policy degrees.",
+      "careers": [
+        "Policy Analyst",
+        "Diplomat",
+        "Civil Servant",
+        "Political Journalist"
+      ]
+    },
+    {
+      "id": "portuguese",
+      "name": "Portuguese",
+      "category": "Languages",
+      "relevance": "Supports language, Lusophone-area-studies and international-business degrees.",
+      "careers": [
+        "Translator/Interpreter",
+        "International Trade Specialist",
+        "Diplomat",
+        "Teacher"
+      ]
+    },
+    {
+      "id": "product-design",
+      "name": "Product Design",
+      "category": "Arts, Design & Media",
+      "relevance": "Hands-on foundation for product design and industrial/mechanical-engineering degrees.",
+      "careers": [
+        "Product Designer",
+        "Industrial Designer",
+        "Mechanical Engineer",
+        "CAD Technician"
+      ]
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Core foundation for psychology, counselling and behavioural-science degrees.",
+      "careers": [
+        "Clinical Psychologist",
+        "Counsellor",
+        "HR Specialist",
+        "UX Researcher"
+      ]
+    },
+    {
+      "id": "punjabi",
+      "name": "Punjabi",
+      "category": "Languages",
+      "relevance": "Supports language, linguistics and South Asian studies pathways.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Community Liaison Officer",
+        "Broadcaster"
+      ]
+    },
+    {
+      "id": "religious-studies",
+      "name": "Religious Studies",
+      "category": "Religious & Classical Studies",
+      "relevance": "Foundation for theology, comparative religion and philosophy degrees.",
+      "careers": [
+        "Religious Educator",
+        "Chaplain",
+        "Academic Researcher",
+        "Interfaith Officer"
+      ]
+    },
+    {
+      "id": "russian",
+      "name": "Russian",
+      "category": "Languages",
+      "relevance": "Supports language, international-relations and area-studies degrees.",
+      "careers": [
+        "Translator/Interpreter",
+        "Diplomat",
+        "Intelligence Analyst",
+        "Teacher"
+      ]
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Foundation for sociology, social policy and social-work degrees.",
+      "careers": [
+        "Social Researcher",
+        "Social Worker",
+        "Policy Analyst",
+        "HR Specialist"
+      ]
+    },
+    {
+      "id": "software-systems-development",
+      "name": "Software Systems Development",
+      "category": "Mathematics & Computing",
+      "relevance": "Hands-on programming foundation for software-engineering and computer-science degrees.",
+      "careers": [
+        "Software Developer",
+        "Systems Engineer",
+        "App Developer",
+        "QA Engineer"
+      ]
+    },
+    {
+      "id": "spanish",
+      "name": "Spanish",
+      "category": "Languages",
+      "relevance": "Supports modern-languages, international-business and Latin-American-studies degrees.",
+      "careers": [
+        "Translator/Interpreter",
+        "International Trade Specialist",
+        "Teacher",
+        "Diplomat"
+      ]
+    },
+    {
+      "id": "sports-science",
+      "name": "Sports Science",
+      "category": "Applied & Vocational",
+      "relevance": "Foundation for sports science, exercise physiology and physiotherapy-adjacent degrees.",
+      "careers": [
+        "Sports Scientist",
+        "Strength & Conditioning Coach",
+        "Physiotherapist",
+        "Performance Analyst"
+      ]
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "category": "Mathematics & Computing",
+      "relevance": "Directly relevant to data science, actuarial science, economics and quantitative social science.",
+      "careers": [
+        "Data Scientist",
+        "Actuary",
+        "Biostatistician",
+        "Quantitative Analyst"
+      ]
+    },
+    {
+      "id": "tamil",
+      "name": "Tamil",
+      "category": "Languages",
+      "relevance": "Supports language, linguistics and South Asian studies pathways.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Civil Servant",
+        "Media Professional"
+      ]
+    },
+    {
+      "id": "thinking-skills",
+      "name": "Thinking Skills",
+      "category": "Humanities & Social Sciences",
+      "relevance": "Critical-reasoning subject that strengthens applications to law, PPE and social-science degrees.",
+      "careers": [
+        "Lawyer",
+        "Policy Analyst",
+        "Management Consultant",
+        "Researcher"
+      ]
+    },
+    {
+      "id": "travel-and-tourism",
+      "name": "Travel and Tourism",
+      "category": "Business & Economics",
+      "relevance": "Foundation for tourism, hospitality and events-management degrees.",
+      "careers": [
+        "Tourism Manager",
+        "Event Planner",
+        "Hotel Manager",
+        "Travel Consultant"
+      ]
+    },
+    {
+      "id": "turkish",
+      "name": "Turkish",
+      "category": "Languages",
+      "relevance": "Supports language, area-studies and diplomacy routes.",
+      "careers": [
+        "Translator",
+        "Diplomat",
+        "Regional Analyst",
+        "Teacher"
+      ]
+    },
+    {
+      "id": "urdu",
+      "name": "Urdu",
+      "category": "Languages",
+      "relevance": "Supports language, linguistics, journalism and South Asian studies degrees, especially in Pakistan and the diaspora.",
+      "careers": [
+        "Translator",
+        "Journalist/Broadcaster",
+        "Teacher",
+        "Civil Servant"
+      ]
+    },
+    {
+      "id": "welsh",
+      "name": "Welsh",
+      "category": "Languages",
+      "relevance": "Modern-language credential supporting linguistics and Celtic-studies routes.",
+      "careers": [
+        "Translator",
+        "Teacher",
+        "Broadcaster",
+        "Civil Servant"
+      ]
+    }
+  ]
+}
